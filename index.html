@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vũ Vé Xe - Đặt vé xe khách nhanh chóng và thuê xe dịch vụ 4 chỗ, 7 chỗ.">
+  <meta name="theme-color" content="#0750a5">
+  <title>Vũ Vé Xe | Đặt vé xe & Thuê xe 4 chỗ, 7 chỗ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="#home" aria-label="Vũ Vé Xe">
+    <span class="brand-icon">🚌</span>
+    <span><b>VŨ VÉ XE</b><small>Đặt vé nhanh - Giá tốt - Hỗ trợ tận tâm</small></span>
+  </a>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Mở menu">☰</button>
+  <nav id="nav">
+    <a href="#home">Trang chủ</a>
+    <a href="#datve">Đặt vé xe</a>
+    <a href="#thuexe">Thuê xe dịch vụ</a>
+    <a href="#tuyenxe">Tuyến xe</a>
+    <a href="#lienhe">Liên hệ</a>
+  </nav>
+  <a class="phone" href="tel:0386003098">☎ 0386 003 098</a>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">VŨ VÉ XE</span>
+      <h1>Đặt vé xe dễ dàng,<br><span>đi muôn nơi</span></h1>
+      <p>Hỗ trợ đặt vé xe khách và thuê xe dịch vụ 4 chỗ, 7 chỗ nhanh chóng.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#datve">🎫 Đặt vé ngay</a>
+        <a class="btn light" href="#thuexe">🚗 Thuê xe</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="sun"></div>
+      <div class="mountain m1"></div><div class="mountain m2"></div>
+      <div class="road"></div>
+      <div class="bus-illustration">🚌</div>
+    </div>
+  </div>
+
+  <div class="booking-card" id="datve">
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('ticket',this)">🚌 ĐẶT VÉ XE</button>
+      <button class="tab" onclick="switchTab('car',this)">🚗 THUÊ XE DỊCH VỤ</button>
+    </div>
+
+    <form id="ticketForm" class="form-panel" onsubmit="sendTicket(event)">
+      <div class="field"><label>Điểm đi</label><input id="from" required placeholder="Ví dụ: Quảng Trị"></div>
+      <div class="field"><label>Điểm đến</label><input id="to" required placeholder="Ví dụ: Sài Gòn"></div>
+      <div class="field"><label>Ngày đi</label><input id="date" required type="date"></div>
+      <div class="field"><label>Số khách</label><select id="guests"><option>1 khách</option><option>2 khách</option><option>3 khách</option><option>4 khách</option><option>5+ khách</option></select></div>
+      <button class="btn orange" type="submit">TÌM / GỬI YÊU CẦU</button>
+    </form>
+
+    <form id="carForm" class="form-panel hidden" onsubmit="sendCar(event)">
+      <div class="field"><label>Loại xe</label><select id="carType"><option>Xe 4 chỗ</option><option>Xe 7 chỗ</option></select></div>
+      <div class="field"><label>Điểm đón</label><input id="pickup" required placeholder="Địa điểm đón"></div>
+      <div class="field"><label>Điểm đến</label><input id="dropoff" required placeholder="Địa điểm đến"></div>
+      <div class="field"><label>Ngày đi</label><input id="carDate" required type="date"></div>
+      <button class="btn orange" type="submit">NHẬN BÁO GIÁ</button>
+    </form>
+    <p class="form-note">* Bản miễn phí: yêu cầu sẽ được tạo thành tin nhắn để bạn gửi cho Vũ Vé Xe qua Zalo.</p>
+  </div>
+</section>
+
+<section class="benefits">
+  <div><span>🎟️</span><b>Đặt vé dễ dàng</b><small>Hỗ trợ nhiều tuyến</small></div>
+  <div><span>💰</span><b>Giá tốt</b><small>Tư vấn theo nhu cầu</small></div>
+  <div><span>🎧</span><b>Hỗ trợ tận tâm</b><small>Tư vấn nhanh chóng</small></div>
+  <div><span>🛡️</span><b>Thông tin rõ ràng</b><small>Hỗ trợ trước chuyến đi</small></div>
+</section>
+
+<section class="section" id="tuyenxe">
+  <div class="section-head">
+    <div><span class="eyebrow">GỢI Ý</span><h2>Các tuyến xe nổi bật</h2></div>
+    <a href="#datve">Đặt vé →</a>
+  </div>
+  <div class="route-grid">
+    <article class="route-card"><div class="route-photo">🌅</div><div><h3>Quảng Trị → Sài Gòn</h3><p>Xe giường nằm · Limousine</p><strong>Từ 350.000đ</strong></div><button onclick="chooseRoute('Quảng Trị','Sài Gòn')">Chọn tuyến</button></article>
+    <article class="route-card"><div class="route-photo">🏙️</div><div><h3>Quảng Trị → Hà Nội</h3><p>Xe giường nằm · Limousine</p><strong>Từ 600.000đ</strong></div><button onclick="chooseRoute('Quảng Trị','Hà Nội')">Chọn tuyến</button></article>
+    <article class="route-card"><div class="route-photo">🌿</div><div><h3>Đà Nẵng → Đà Lạt</h3><p>Limousine · Xe giường nằm</p><strong>Từ 450.000đ</strong></div><button onclick="chooseRoute('Đà Nẵng','Đà Lạt')">Chọn tuyến</button></article>
+    <article class="route-card"><div class="route-photo">🏔️</div><div><h3>Đà Lạt → Sài Gòn</h3><p>Xe giường nằm · Limousine</p><strong>Từ 300.000đ</strong></div><button onclick="chooseRoute('Đà Lạt','Sài Gòn')">Chọn tuyến</button></article>
+    <article class="route-card"><div class="route-photo">🌊</div><div><h3>Quảng Bình → Nha Trang</h3><p>Xe giường nằm · Limousine</p><strong>Từ 400.000đ</strong></div><button onclick="chooseRoute('Quảng Bình','Nha Trang')">Chọn tuyến</button></article>
+    <article class="route-card"><div class="route-photo">🌉</div><div><h3>Quảng Trị → Đà Nẵng</h3><p>Nhiều khung giờ</p><strong>Liên hệ báo giá</strong></div><button onclick="chooseRoute('Quảng Trị','Đà Nẵng')">Chọn tuyến</button></article>
+  </div>
+</section>
+
+<section class="section service-section" id="thuexe">
+  <div class="section-head">
+    <div><span class="eyebrow">DỊCH VỤ</span><h2>Thuê xe dịch vụ 4 chỗ & 7 chỗ</h2></div>
+  </div>
+  <div class="service-grid">
+    <article class="service-card"><div class="service-image car4">🚗</div><h3>Xe 4 chỗ</h3><p>Phù hợp gia đình nhỏ, đi công tác, đưa đón sân bay.</p><button onclick="selectCar('Xe 4 chỗ')">Nhận báo giá</button></article>
+    <article class="service-card"><div class="service-image car7">🚙</div><h3>Xe 7 chỗ</h3><p>Rộng rãi cho gia đình, nhóm bạn và các chuyến đi tỉnh.</p><button onclick="selectCar('Xe 7 chỗ')">Nhận báo giá</button></article>
+    <article class="service-card"><div class="service-image airport">✈️</div><h3>Đưa đón sân bay</h3><p>Đặt xe trước, chủ động thời gian di chuyển.</p><button onclick="selectCar('Đưa đón sân bay')">Tư vấn</button></article>
+    <article class="service-card"><div class="service-image trip">🛣️</div><h3>Xe đi tỉnh</h3><p>Đi 1 chiều, 2 chiều hoặc thuê xe theo nhu cầu.</p><button onclick="selectCar('Xe đi tỉnh')">Tư vấn</button></article>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="section-head center"><div><span class="eyebrow">ĐƠN GIẢN</span><h2>Đặt xe chỉ với 3 bước</h2></div></div>
+  <div class="step-grid">
+    <div><span>1</span><h3>Chọn dịch vụ</h3><p>Chọn tuyến xe hoặc loại xe bạn cần.</p></div>
+    <div><span>2</span><h3>Gửi yêu cầu</h3><p>Điền thông tin hành trình và số điện thoại.</p></div>
+    <div><span>3</span><h3>Vũ Vé Xe xác nhận</h3><p>Nhận tư vấn, giá và thông tin chuyến đi.</p></div>
+  </div>
+</section>
+
+<section class="contact-section" id="lienhe">
+  <div>
+    <span class="eyebrow">LIÊN HỆ</span>
+    <h2>Cần đặt vé hoặc thuê xe?</h2>
+    <p>Gửi yêu cầu ngay, Vũ Vé Xe sẽ hỗ trợ bạn nhanh nhất.</p>
+  </div>
+  <div class="contact-actions">
+    <a class="btn orange" href="tel:0386003098">☎ Gọi 0386 003 098</a>
+    <a class="btn zalo" href="https://zalo.me/0386003098" target="_blank" rel="noopener">💬 Nhắn Zalo</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div><a class="brand footer-brand" href="#home"><span class="brand-icon">🚌</span><span><b>VŨ VÉ XE</b><small>Đặt vé nhanh - Giá tốt - Hỗ trợ tận tâm</small></span></a><p>Hỗ trợ đặt vé xe và thuê xe dịch vụ.</p></div>
+  <div><h3>Dịch vụ</h3><a href="#datve">Đặt vé xe</a><a href="#thuexe">Xe 4 chỗ</a><a href="#thuexe">Xe 7 chỗ</a></div>
+  <div><h3>Liên hệ</h3><a href="tel:0386003098">0386 003 098</a><a href="https://zalo.me/0386003098" target="_blank" rel="noopener">Zalo</a></div>
+  <div><h3>Ghi chú</h3><p>Website bản miễn phí, chưa tích hợp thanh toán và giữ ghế tự động.</p></div>
+</footer>
+<div class="copyright">© 2026 Vũ Vé Xe · Website demo miễn phí</div>
+<a class="floating" href="https://zalo.me/0386003098" target="_blank" rel="noopener" aria-label="Chat Zalo">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
