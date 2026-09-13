@@ -1,82 +1,288 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VŨ VÉ XE - Đặt vé xe</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vũ Vé Xe - Đặt vé xe & Thuê xe dịch vụ</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <header class="header">
-  <div class="logo">🚌 <span>VŨ VÉ XE</span><small>Đặt vé nhanh - Giá tốt - Hỗ trợ tận tâm</small></div>
+
+  <div class="logo">
+    🚌 <span>VŨ VÉ XE</span>
+    <small>Đặt vé nhanh - Giá tốt - Hỗ trợ tận tâm</small>
+  </div>
+
   <nav>
     <a href="index.html">Trang chủ</a>
     <a href="#tuyen">Tuyến xe</a>
     <a href="#thuexe">Thuê xe dịch vụ</a>
     <a href="#lienhe">Liên hệ</a>
   </nav>
-  <a class="phone" href="tel:0386003098">☎ 0386 003 098</a>
+
+  <a class="phone" href="tel:0386003098">
+    ☎ 0386 003 098
+  </a>
+
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero">
+
   <div class="hero-content">
+
     <div>
-      <h1>ĐẶT VÉ XE DỄ DÀNG<br>ĐI MUÔN NƠI</h1>
-      <p>Chọn tuyến → xem nhà xe → gửi yêu cầu đặt vé qua Zalo</p>
+
+      <h1>
+        ĐẶT VÉ XE DỄ DÀNG<br>
+        ĐI MUÔN NƠI
+      </h1>
+
+      <p>
+        Chọn tuyến → xem nhà xe → gửi yêu cầu đặt vé qua Zalo
+      </p>
+
     </div>
-    <div class="bus">🚌</div>
+
+    <div class="bus">
+      🚌
+    </div>
+
   </div>
-  <div class="search-box" id="datve">
-    <h2>Tìm tuyến xe</h2>
+
+
+  <!-- TÌM TUYẾN -->
+
+  <div class="search-box">
+
+    <div class="tabs">
+
+      <button class="active">
+        🚌 ĐẶT VÉ XE
+      </button>
+
+      <button
+        type="button"
+        onclick="document.getElementById('thuexe').scrollIntoView({behavior:'smooth'})">
+
+        🚗 THUÊ XE DỊCH VỤ
+
+      </button>
+
+    </div>
+
+
     <div class="fields">
-      <label>Điểm đi<input id="from" placeholder="Ví dụ: Quảng Trị"></label>
-      <label>Điểm đến<input id="to" placeholder="Ví dụ: Sài Gòn"></label>
-      <button class="search" onclick="searchRoute()">TÌM TUYẾN XE</button>
+
+      <label>
+
+        Điểm đi
+
+        <input
+          id="from"
+          type="text"
+          placeholder="Ví dụ: Quảng Trị">
+
+      </label>
+
+
+      <label>
+
+        Điểm đến
+
+        <input
+          id="to"
+          type="text"
+          placeholder="Ví dụ: Sài Gòn">
+
+      </label>
+
+
+      <label>
+
+        Ngày đi
+
+        <input
+          type="date">
+
+      </label>
+
+
+      <label>
+
+        Số lượng khách
+
+        <select>
+
+          <option>1 khách</option>
+          <option>2 khách</option>
+          <option>3 khách</option>
+          <option>4 khách</option>
+          <option>5 khách</option>
+          <option>6 khách</option>
+          <option>7 khách</option>
+          <option>8 khách</option>
+          <option>9 khách</option>
+          <option>10 khách</option>
+
+        </select>
+
+      </label>
+
+
+      <button
+        class="search"
+        type="button"
+        onclick="searchRoute()">
+
+        TÌM TUYẾN XE
+
+      </button>
+
     </div>
+
   </div>
+
 </section>
+
+
+<!-- LỢI ÍCH -->
 
 <section class="benefits">
-  <div>🎟️ <b>Đặt vé dễ dàng</b><small>Chọn đúng tuyến, đúng nhà xe</small></div>
-  <div>🏷️ <b>Giá tốt</b><small>Hỗ trợ tư vấn nhanh</small></div>
-  <div>🎧 <b>Hỗ trợ tận tâm</b><small>Tư vấn qua Zalo</small></div>
-  <div>🛡️ <b>An toàn</b><small>Thông tin rõ ràng</small></div>
+
+  <div>
+
+    🎟️
+
+    <b>Đặt vé dễ dàng</b>
+
+    <small>
+      Chọn tuyến, chọn nhà xe
+    </small>
+
+  </div>
+
+
+  <div>
+
+    🏷️
+
+    <b>Giá tốt</b>
+
+    <small>
+      Hỗ trợ tư vấn nhanh
+    </small>
+
+  </div>
+
+
+  <div>
+
+    🎧
+
+    <b>Hỗ trợ tận tâm</b>
+
+    <small>
+      Tư vấn qua Zalo
+    </small>
+
+  </div>
+
+
+  <div>
+
+    🛡️
+
+    <b>An toàn</b>
+
+    <small>
+      Thông tin rõ ràng
+    </small>
+
+  </div>
+
 </section>
+
+
+
+<!-- TUYẾN XE -->
 
 <main>
-<section id="tuyen" class="section">
-  <div class="section-title"><h2>🚌 Các tuyến xe nổi bật</h2><a href="#datve">Đặt vé →</a></div>
+
+<section
+  id="tuyen"
+  class="section">
+
+  <div class="section-title">
+
+    <h2>
+      🚌 CÁC TUYẾN XE NỔI BẬT
+    </h2>
+
+    <a href="#tuyen">
+      Xem tuyến →
+    </a>
+
+  </div>
+
+
   <div class="routes">
-    <article><div class="route-img">🌄</div><div><h3>Quảng Trị → Sài Gòn</h3><p>Xe giường nằm · Limousine</p><small>Từ 350.000đ</small></div><button onclick="goRoute('Quảng Trị','Sài Gòn')">Chọn tuyến</button></article>
-    <article><div class="route-img">🏙️</div><div><h3>Quảng Trị → Hà Nội</h3><p>Xe giường nằm · Limousine</p><small>Từ 600.000đ</small></div><button onclick="goRoute('Quảng Trị','Hà Nội')">Chọn tuyến</button></article>
-    <article><div class="route-img">🌿</div><div><h3>Đà Nẵng → Đà Lạt</h3><p>Limousine · Xe giường nằm</p><small>Từ 450.000đ</small></div><button onclick="goRoute('Đà Nẵng','Đà Lạt')">Chọn tuyến</button></article>
-    <article><div class="route-img">🏔️</div><div><h3>Đà Lạt → Sài Gòn</h3><p>Xe giường nằm · Limousine</p><small>Từ 300.000đ</small></div><button onclick="goRoute('Đà Lạt','Sài Gòn')">Chọn tuyến</button></article>
-    <article><div class="route-img">🌅</div><div><h3>Quảng Bình → Nha Trang</h3><p>Xe giường nằm · Limousine</p><small>Từ 400.000đ</small></div><button onclick="goRoute('Quảng Bình','Nha Trang')">Chọn tuyến</button></article>
-  </div>
-</section>
 
-<section id="thuexe" class="section">
-  <div class="section-title"><h2>🚗 Thuê xe dịch vụ</h2></div>
-  <div class="services">
-    <article><div class="car">🚗</div><h3>Xe 4 chỗ</h3><p>Phù hợp gia đình nhỏ, đi công tác</p></article>
-    <article><div class="car">🚙</div><h3>Xe 7 chỗ</h3><p>Không gian rộng rãi, tiện nghi</p></article>
-    <article><div class="car">✈️</div><h3>Đưa đón sân bay</h3><p>Đúng giờ, an toàn, chuyên nghiệp</p></article>
-    <article><div class="car">🛣️</div><h3>Xe đi tỉnh</h3><p>Đi tỉnh, du lịch, công tác</p></article>
-  </div>
-</section>
-</main>
 
-<section class="cta">
-  <h2>Cần đặt vé hoặc thuê xe?</h2>
-  <p>Chọn tuyến để xem nhà xe và gửi yêu cầu đặt vé.</p>
-  <a href="tel:0386003098">☎ Gọi ngay 0386 003 098</a>
-</section>
+    <!-- QUẢNG TRỊ - SÀI GÒN -->
 
-<footer id="lienhe">
-  <div><h2>🚌 VŨ VÉ XE</h2><p>Đặt vé nhanh - Giá tốt - Hỗ trợ tận tâm</p></div>
-  <div><h3>Thông tin liên hệ</h3><p>☎ 0386 003 098</p><p>📍 Quảng Trị</p></div>
-  <div><h3>Kết nối</h3><p>Zalo · Facebook · TikTok</p></div>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+    <article>
+
+      <div class="route-img">
+        🌅
+      </div>
+
+
+      <div>
+
+        <h3>
+          Quảng Trị → Sài Gòn
+        </h3>
+
+        <p>
+          Xe giường nằm · Limousine
+        </p>
+
+        <small>
+          Từ 350.000đ
+        </small>
+
+      </div>
+
+
+      <strong>
+        350.000đ
+      </strong>
+
+
+      <button
+        type="button"
+        onclick="goRoute('Quảng Trị','Sài Gòn')">
+
+        Chọn tuyến
+
+      </button>
+
+    </article>
+
+
+
+    <!-- QUẢNG TRỊ - HÀ NỘI -->
+
+    <article>
+
+      <div class="route-img">
+        🏙️
+      </div>
