@@ -1,26 +1,310 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VŨ VÉ XE - Chọn nhà xe</title>
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>Vũ Vé Xe - Thông tin tuyến</title>
+
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+.route-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 15px 60px;
+}
+
+.back {
+  display: inline-block;
+  color: #0750a5;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.route-head {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.route-head h1 {
+  margin: 0 0 10px;
+  color: #0750a5;
+  font-size: 30px;
+}
+
+.route-head p {
+  margin: 0;
+  color: #666;
+}
+
+.notice {
+  background: #fff8e8;
+  border-left: 4px solid #f58218;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.company-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.company {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.company-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.company h2 {
+  margin: 0 0 8px;
+  color: #123b7a;
+  font-size: 20px;
+}
+
+.company p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.schedule {
+  color: #0750a5 !important;
+  font-weight: bold;
+}
+
+.price {
+  color: #f47700;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.book-btn,
+.send {
+  border: 0;
+  background: #0750a5;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.book-btn:hover,
+.send:hover {
+  background: #063b80;
+}
+
+.booking {
+  display: none;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+.booking.open {
+  display: block;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.booking-grid label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+.booking-grid input,
+.booking-grid select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.booking-actions {
+  margin-top: 5px;
+}
+
+.send {
+  background: #f58218;
+}
+
+.empty {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+
+  .route-page {
+    padding: 20px 12px 40px;
+  }
+
+  .route-head h1 {
+    font-size: 25px;
+  }
+
+  .company-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+
 </head>
+
+
 <body>
+
+
 <header class="header">
-  <div class="logo">🚌 <span>VŨ VÉ XE</span><small>Đặt vé nhanh - Giá tốt - Hỗ trợ tận tâm</small></div>
-  <a class="phone" href="tel:0386003098">☎ 0386 003 098</a>
+
+  <div class="logo">
+
+    🚌 <span>VŨ VÉ XE</span>
+
+    <small>
+      Đặt vé nhanh - Giá tốt - Hỗ trợ tận tâm
+    </small>
+
+  </div>
+
+
+  <nav>
+
+    <a href="index.html">
+      Trang chủ
+    </a>
+
+    <a href="index.html#tuyen">
+      Tuyến xe
+    </a>
+
+    <a href="index.html#thuexe">
+      Thuê xe dịch vụ
+    </a>
+
+    <a href="index.html#lienhe">
+      Liên hệ
+    </a>
+
+  </nav>
+
+
+  <a
+    class="phone"
+    href="tel:0386003098"
+  >
+    ☎ 0386 003 098
+  </a>
+
 </header>
 
+
+
 <main class="route-page">
-  <a class="back" href="index.html">← Quay lại trang chủ</a>
-  <div id="routeContent"></div>
+
+
+  <a
+    class="back"
+    href="index.html"
+  >
+    ← Quay lại trang chủ
+  </a>
+
+
+  <!-- QUAN TRỌNG: SCRIPT.JS SẼ HIỂN THỊ NỘI DUNG Ở ĐÂY -->
+
+  <div id="routeContent">
+
+    <div class="empty">
+
+      Đang tải thông tin tuyến...
+
+    </div>
+
+  </div>
+
+
 </main>
 
+
+
 <footer>
-  <div><h2>🚌 VŨ VÉ XE</h2><p>Hỗ trợ đặt vé đi toàn quốc</p></div>
-  <div><h3>Liên hệ</h3><p>☎ 0386 003 098</p></div>
+
+  <div>
+
+    <h2>🚌 VŨ VÉ XE</h2>
+
+    <p>
+      Hỗ trợ đặt vé đi toàn quốc
+    </p>
+
+  </div>
+
+
+  <div>
+
+    <h3>Liên hệ</h3>
+
+    <p>
+      ☎ 0386 003 098
+    </p>
+
+  </div>
+
 </footer>
+
+
+
+<!-- BẮT BUỘC -->
+
 <script src="script.js"></script>
+
+
 </body>
+
 </html>
