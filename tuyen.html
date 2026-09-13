@@ -1,194 +1,185 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<title>Vũ Vé Xe - Thông tin tuyến</title>
+<title>VŨ VÉ XE - Chọn nhà xe</title>
 
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-.route-page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 30px 15px 60px;
+body{
+    margin:0;
+    background:#f4f8fd;
+    font-family:Arial,sans-serif;
+    color:#123b7a;
 }
 
-.back {
-  display: inline-block;
-  color: #0750a5;
-  text-decoration: none;
-  font-weight: bold;
-  margin-bottom: 20px;
+.route-page{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px 60px;
 }
 
-.route-head {
-  background: white;
-  border-radius: 14px;
-  padding: 25px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 15px rgba(0,0,0,.08);
+.back{
+    display:inline-block;
+    margin-bottom:20px;
+    color:#0750a5;
+    font-weight:bold;
+    text-decoration:none;
 }
 
-.route-head h1 {
-  margin: 0 0 10px;
-  color: #0750a5;
-  font-size: 30px;
+.route-title{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 15px #0001;
+    margin-bottom:15px;
 }
 
-.route-head p {
-  margin: 0;
-  color: #666;
+.route-title h1{
+    margin:0 0 10px;
+    color:#0750a5;
+    font-size:30px;
 }
 
-.notice {
-  background: #fff8e8;
-  border-left: 4px solid #f58218;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  color: #555;
+.route-title p{
+    margin:0;
+    color:#666;
 }
 
-.company-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.notice{
+    background:#fff8e7;
+    border-left:4px solid #f58218;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:20px;
+    color:#555;
 }
 
-.company {
-  background: white;
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 3px 15px rgba(0,0,0,.08);
+.company{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:15px;
+    box-shadow:0 3px 15px #0001;
 }
 
-.company-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+.company-top{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    align-items:center;
 }
 
-.company h2 {
-  margin: 0 0 8px;
-  color: #123b7a;
-  font-size: 20px;
+.company h2{
+    margin:0 0 10px;
+    font-size:20px;
+    color:#123b7a;
 }
 
-.company p {
-  margin: 5px 0;
-  color: #666;
+.company p{
+    margin:6px 0;
+    color:#666;
 }
 
-.schedule {
-  color: #0750a5 !important;
-  font-weight: bold;
+.time{
+    color:#0750a5!important;
+    font-weight:bold;
 }
 
-.price {
-  color: #f47700;
-  font-size: 18px;
-  font-weight: bold;
-  white-space: nowrap;
+.price{
+    color:#f47700;
+    font-size:18px;
+    font-weight:bold;
+    white-space:nowrap;
 }
 
-.book-btn,
-.send {
-  border: 0;
-  background: #0750a5;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 12px;
+.book{
+    display:inline-block;
+    margin-top:12px;
+    padding:12px 18px;
+    background:#0750a5;
+    color:white;
+    border:0;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.book-btn:hover,
-.send:hover {
-  background: #063b80;
+.book:hover{
+    background:#063b80;
 }
 
-.booking {
-  display: none;
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: 1px solid #ddd;
+.booking{
+    display:none;
+    margin-top:15px;
+    padding-top:15px;
+    border-top:1px solid #ddd;
 }
 
-.booking.open {
-  display: block;
+.booking.show{
+    display:block;
 }
 
-.booking-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
 }
 
-.booking-grid label {
-  font-size: 13px;
-  font-weight: bold;
-  color: #333;
+.form-grid label{
+    font-size:13px;
+    font-weight:bold;
+    color:#333;
 }
 
-.booking-grid input,
-.booking-grid select {
-  width: 100%;
-  margin-top: 6px;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 7px;
-  background: white;
-  box-sizing: border-box;
+.form-grid input,
+.form-grid select{
+    width:100%;
+    padding:12px;
+    margin-top:6px;
+    box-sizing:border-box;
+    border:1px solid #ddd;
+    border-radius:7px;
+    background:white;
 }
 
-.booking-actions {
-  margin-top: 5px;
+.zalo{
+    margin-top:15px;
+    padding:13px 20px;
+    background:#f58218;
+    color:white;
+    border:0;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.send {
-  background: #f58218;
+.empty{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
 }
 
-.empty {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-}
+@media(max-width:700px){
 
-@media (max-width: 700px) {
+    .route-title h1{
+        font-size:24px;
+    }
 
-  .route-page {
-    padding: 20px 12px 40px;
-  }
+    .company-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-  .route-head h1 {
-    font-size: 25px;
-  }
-
-  .company-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .price {
-    font-size: 16px;
-  }
-
-  .booking-grid {
-    grid-template-columns: 1fr;
-  }
+    .form-grid{
+        grid-template-columns:1fr;
+    }
 
 }
 
@@ -196,50 +187,36 @@
 
 </head>
 
-
 <body>
 
 
 <header class="header">
 
-  <div class="logo">
+<div class="logo">
 
-    🚌 <span>VŨ VÉ XE</span>
+🚌 <span>VŨ VÉ XE</span>
 
-    <small>
-      Đặt vé nhanh - Giá tốt - Hỗ trợ tận tâm
-    </small>
+<small>
+Đặt vé nhanh - Giá tốt - Hỗ trợ tận tâm
+</small>
 
-  </div>
+</div>
 
+<nav>
 
-  <nav>
+<a href="index.html">Trang chủ</a>
 
-    <a href="index.html">
-      Trang chủ
-    </a>
+<a href="index.html#tuyen">Tuyến xe</a>
 
-    <a href="index.html#tuyen">
-      Tuyến xe
-    </a>
+<a href="index.html#thuexe">Thuê xe dịch vụ</a>
 
-    <a href="index.html#thuexe">
-      Thuê xe dịch vụ
-    </a>
+<a href="index.html#lienhe">Liên hệ</a>
 
-    <a href="index.html#lienhe">
-      Liên hệ
-    </a>
+</nav>
 
-  </nav>
-
-
-  <a
-    class="phone"
-    href="tel:0386003098"
-  >
-    ☎ 0386 003 098
-  </a>
+<a class="phone" href="tel:0386003098">
+☎ 0386 003 098
+</a>
 
 </header>
 
@@ -247,26 +224,18 @@
 
 <main class="route-page">
 
-
-  <a
-    class="back"
-    href="index.html"
-  >
-    ← Quay lại trang chủ
-  </a>
+<a class="back" href="index.html">
+← Quay lại trang chủ
+</a>
 
 
-  <!-- QUAN TRỌNG: SCRIPT.JS SẼ HIỂN THỊ NỘI DUNG Ở ĐÂY -->
+<div id="routeContent">
 
-  <div id="routeContent">
+<div class="empty">
+Đang tải thông tin tuyến...
+</div>
 
-    <div class="empty">
-
-      Đang tải thông tin tuyến...
-
-    </div>
-
-  </div>
+</div>
 
 
 </main>
@@ -275,36 +244,65 @@
 
 <footer>
 
-  <div>
+<div>
 
-    <h2>🚌 VŨ VÉ XE</h2>
+<h2>🚌 VŨ VÉ XE</h2>
 
-    <p>
-      Hỗ trợ đặt vé đi toàn quốc
-    </p>
+<p>
+Hỗ trợ đặt vé đi toàn quốc
+</p>
 
-  </div>
+</div>
 
+<div>
 
-  <div>
+<h3>Liên hệ</h3>
 
-    <h3>Liên hệ</h3>
+<p>
+☎ 0386 003 098
+</p>
 
-    <p>
-      ☎ 0386 003 098
-    </p>
-
-  </div>
+</div>
 
 </footer>
 
 
 
-<!-- BẮT BUỘC -->
+<script>
 
-<script src="script.js"></script>
+const ZALO = "https://zalo.me/0386003098";
 
 
-</body>
+const ROUTES = {
 
-</html>
+"Quảng Trị|Sài Gòn":[
+["Nhà xe Quang Dũng","8h · 11h · 13h","Xe giường nằm","Liên hệ"],
+["Nhà xe Tân Quang Dũng","6h30 · 13h · 14h","Xe giường nằm","Liên hệ"],
+["Nhà xe Tiên Tiến","6h","Xe giường nằm","Liên hệ"],
+["Nhà xe An Bình","10h30","Xe giường nằm","Liên hệ"]
+],
+
+"Quảng Trị|Nha Trang":[
+["Nhà xe Quảng Trị - Nha Trang","Nhiều khung giờ","Xe giường nằm / Limousine","Liên hệ"]
+],
+
+"Quảng Trị|Hà Nội":[
+["Nhà xe Tân Quang Dũng","Nhiều khung giờ","Xe giường nằm","Từ 600.000đ"],
+["Nhà xe Quang Dũng","Nhiều khung giờ","Xe giường nằm","Liên hệ"],
+["Nhà xe Hoa Hồng","Nhiều khung giờ","Xe giường nằm","Liên hệ"],
+["Nhà xe Camel Travel","Nhiều khung giờ","Xe giường nằm","Liên hệ"],
+["Nhà xe Thanh Liễu","Nhiều khung giờ","Xe giường nằm","Liên hệ"]
+],
+
+"Quảng Trị|Quy Nhơn":[
+["Nhà xe Quảng Trị - Quy Nhơn","Nhiều khung giờ","Xe giường nằm","Liên hệ"]
+],
+
+"Quảng Trị|Đà Nẵng":[
+["HK Buslines","6h · 7h · 18h30","Xe giường nằm","Liên hệ"],
+["Tân Quang Dũng Mến Thương","5h30 · 6h · 7h · 9h · 11h · 12h · 13h · 15h · 16h · 18h · 19h","Xe giường nằm","Liên hệ"],
+["Huệ Thi","7h · 9h · 12h · 13h · 15h · 18h","Xe giường nằm","Liên hệ"],
+["Tân Kim Chi","9h · 15h · 18h · 20h · 21h","Limousine","Liên hệ"]
+],
+
+"
