@@ -1,0 +1,18 @@
+BỘ WEBSITE VŨ VÉ XE - BẢN CÓ ẢNH
+
+Đã giữ lại toàn bộ dữ liệu tuyến/nhà xe hiện có trong tuyen.html, form đặt vé, Zalo và số điện thoại.
+Đã thêm:
+- Logo VŨ VÉ XE tự thiết kế.
+- 20 ảnh xe minh họa theo từng tuyến.
+- 6 ảnh xe minh họa cho thẻ nhà xe.
+- 3 bài viết SEO có ảnh.
+- robots.txt, sitemap.xml, 404.html.
+- SEO title, description, canonical và schema cơ bản.
+
+LƯU Ý ẢNH:
+Ảnh xe trong bộ này là ảnh minh họa tự thiết kế, không phải ảnh chính thức của từng nhà xe. Điều này tránh việc gắn nhầm ảnh hoặc logo của nhà xe/website khác.
+Nếu bạn có ảnh chính thức và quyền sử dụng, có thể thay file trong thư mục images.
+
+UPLOAD:
+Đặt toàn bộ nội dung ZIP vào thư mục gốc repository Vuvexe.
+Giữ nguyên tên index.html và tuyen.html.

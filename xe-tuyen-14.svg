@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<defs><linearGradient id="sky" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#dff2ff"/><stop offset="1" stop-color="#f8fbff"/></linearGradient><linearGradient id="road" x1="0" x2="1"><stop offset="0" stop-color="#68717c"/><stop offset="1" stop-color="#3f4852"/></linearGradient></defs>
+<rect width="1200" height="720" fill="url(#sky)"/><circle cx="1000" cy="130" r="70" fill="#ffd166" opacity=".65"/>
+<path d="M0 480 Q180 410 350 475 T700 455 T1200 460 V720 H0Z" fill="#b8d7bf"/><rect y="540" width="1200" height="180" fill="url(#road)"/>
+<path d="M0 635 H1200" stroke="#e9edf2" stroke-width="10" stroke-dasharray="60 45" opacity=".8"/>
+<rect x="150" y="250" width="900" height="270" rx="38" fill="#0b6b78" stroke="#17324d" stroke-width="8"/>
+<rect x="205" y="285" width="590" height="120" rx="16" fill="#dff3ff" stroke="#17324d" stroke-width="6"/>
+<rect x="815" y="285" width="180" height="120" rx="16" fill="#bfe8ff" stroke="#17324d" stroke-width="6"/>
+<rect x="175" y="420" width="850" height="28" rx="12" fill="#ffffff"/>
+<rect x="210" y="215" width="300" height="54" rx="27" fill="#fff" opacity=".96"/>
+<text x="360" y="251" text-anchor="middle" font-family="DejaVu Sans,Arial,sans-serif" font-size="28" font-weight="800" fill="#0757a6">VŨ VÉ XE</text>
+<circle cx="300" cy="535" r="52" fill="#172033"/><circle cx="900" cy="535" r="52" fill="#172033"/><circle cx="300" cy="535" r="22" fill="#b9c3cc"/><circle cx="900" cy="535" r="22" fill="#b9c3cc"/>
+<text x="600" y="90" text-anchor="middle" font-family="DejaVu Sans,Arial,sans-serif" font-size="34" font-weight="800" fill="#17324d">Đà Nẵng → Sài Gòn</text>
+<text x="600" y="132" text-anchor="middle" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" fill="#56616f">ẢNH XE KHÁCH MINH HỌA</text>
+</svg>
