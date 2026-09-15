@@ -1,0 +1,19 @@
+VŨ VÉ XE – BỘ WEBSITE MỚI
+
+Cấu trúc:
+- index.html: trang chủ
+- tuyen.html: trang thông tin tuyến
+- 404.html: trang lỗi
+- robots.txt
+- sitemap.xml
+- bai-viet/: các bài viết SEO
+- images/: toàn bộ hình ảnh SVG
+
+QUAN TRỌNG:
+Hãy upload các file/thư mục bên trong thư mục này vào thư mục gốc của repository Vuvexe.
+Không upload nguyên thư mục VU-VE-XE-BAN-MOI thành một thư mục con.
+
+Sau khi upload xong, website:
+https://vuvexe.github.io/Vuvexe/
+
+Nếu website chưa đổi ngay, hãy đợi GitHub Pages build xong rồi tải lại trang.
