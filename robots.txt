@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://vuvexe.github.io/Vuvexe/sitemap.xml
