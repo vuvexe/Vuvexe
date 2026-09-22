@@ -1,22 +1,69 @@
-<!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta name="description" content="Tìm tuyến xe khách, limousine, xe giường nằm và thuê xe 4–7 chỗ; xem thông tin tuyến và đặt vé qua Zalo với Vũ Vé Xe."/><meta content="index,follow" name="robots"/><link href="https://vuvexe.github.io/Vuvexe/" rel="canonical"/><title>Vũ Vé Xe – Đặt vé xe toàn quốc</title><link href="style.css" rel="stylesheet"/><meta property="og:type" content="website"/><meta property="og:title" content="Vũ Vé Xe – Đặt vé xe toàn quốc"/><meta property="og:description" content="Tìm tuyến xe khách, limousine, xe giường nằm và thuê xe 4–7 chỗ; xem thông tin tuyến và đặt vé qua Zalo với Vũ Vé Xe."/><meta property="og:url" content="https://vuvexe.github.io/Vuvexe/index.html"/><meta property="og:site_name" content="Vũ Vé Xe"/></head><body><header class="header"><div class="wrap nav"><a class="brand" href="index.html"><span class="ico mascot"><img class="brand-mascot" src="assets/linh-vat-vu-ve-xe.png" alt="Linh vật Vũ Vé Xe"/></span><span><b>VŨ VÉ XE</b><small>Thương hiệu hỗ trợ đặt vé xe toàn quốc</small></span></a><nav class="menu"><a href="index.html">Trang chủ</a><a href="tips.html">50 mẹo đi xe khách</a><a href="rental.html">Thuê xe dịch vụ</a><a href="routes.html">Tuyến xe</a><a href="contact.html">Liên hệ</a></nav></div></header><section class="hero"><div class="wrap"><h1>VŨ VÉ XE – THƯƠNG HIỆU ĐẶT VÉ XE TOÀN QUỐC</h1><p>Đặt vé xe khách • Limousine • Xe giường nằm • Thuê xe dịch vụ</p><p>💰 Giá tốt • 💬 Đặt vé nhanh qua Zalo • 🎧 Hỗ trợ tận tâm</p><div class="home-contact"><span class="home-contact-title">📞 Đặt vé / hỗ trợ:</span><a class="home-number" href="tel:0386003098">0386 003 098</a><a class="home-number" href="tel:0963307942">0963 307 942</a><a class="home-zalo" href="https://zalo.me/0386003098">💬 Đặt vé qua Zalo</a></div><div class="search"><div class="field"><small>Điểm đi</small><select id="from"><option value="">Chọn điểm đi</option><option value="Đà Nẵng">Đà Nẵng</option><option value="Quảng Trị">Quảng Trị</option><option value="Huế">Huế</option><option value="Sài Gòn">Sài Gòn</option><option value="Nha Trang">Nha Trang</option><option value="Đà Lạt">Đà Lạt</option><option value="Quy Nhơn">Quy Nhơn</option><option value="Hà Nội">Hà Nội</option><option value="Quảng Bình">Quảng Bình</option></select></div><div class="field"><small>Điểm đến</small><select id="to"><option value="">Chọn điểm đến</option><option data-from="Đà Nẵng" value="Hà Nội">Hà Nội</option><option data-from="Đà Nẵng" value="Sài Gòn">Sài Gòn</option><option data-from="Đà Nẵng" value="Đà Lạt">Đà Lạt</option><option data-from="Đà Nẵng" value="Nha Trang">Nha Trang</option><option data-from="Quảng Trị" value="Hà Nội">Hà Nội</option><option data-from="Quảng Trị" value="Sài Gòn">Sài Gòn</option><option data-from="Quảng Trị" value="Nha Trang">Nha Trang</option><option data-from="Quảng Trị" value="Đà Lạt">Đà Lạt</option><option data-from="Quảng Trị" value="Quy Nhơn">Quy Nhơn</option><option data-from="Huế" value="Sài Gòn">Sài Gòn</option><option data-from="Huế" value="Hà Nội">Hà Nội</option><option data-from="Huế" value="Nha Trang">Nha Trang</option><option data-from="Huế" value="Đà Lạt">Đà Lạt</option><option data-from="Huế" value="Quảng Trị">Quảng Trị</option><option data-from="Sài Gòn" value="Đà Lạt">Đà Lạt</option><option data-from="Sài Gòn" value="Nha Trang">Nha Trang</option><option data-from="Sài Gòn" value="Quảng Trị">Quảng Trị</option><option data-from="Nha Trang" value="Quy Nhơn">Quy Nhơn</option><option data-from="Nha Trang" value="Đà Lạt">Đà Lạt</option><option data-from="Nha Trang" value="Sài Gòn">Sài Gòn</option><option data-from="Nha Trang" value="Quảng Trị">Quảng Trị</option><option data-from="Đà Lạt" value="Sài Gòn">Sài Gòn</option><option data-from="Đà Lạt" value="Quảng Trị">Quảng Trị</option><option data-from="Quy Nhơn" value="Nha Trang">Nha Trang</option><option data-from="Quy Nhơn" value="Quảng Trị">Quảng Trị</option></select></div><div class="field"><small>Ngày đi</small><input id="homeDate" type="date"/></div><div class="field"><small>Số khách</small><select><option>1 người</option><option>2 người</option><option>3 người</option><option>4+ người</option></select></div><button class="btn" onclick="goRoute()" type="button">🔎 Tìm chuyến</button></div><div class="hero-mascot-card"><img src="assets/linh-vat-vu-ve-xe.png" alt="Linh vật Vũ Vé Xe – dịch vụ đặt vé xe"/><div><b>Linh vật Vũ Vé Xe đồng hành cùng bạn</b><p>Tham khảo nhà xe, loại xe, phòng đôi, phòng đơn và gửi yêu cầu đặt vé qua Zalo.</p><a href="https://zalo.me/0386003098" class="hero-zalo">💬 Đặt vé qua Zalo</a></div></div></div></section><section class="section"><div class="wrap"><h2>🚌 Các tuyến xe nổi bật</h2><div class="grid"><div class="route" data-route="Quảng Trị Sài Gòn"><div class="pic">🚌</div><div><b>Quảng Trị → Sài Gòn</b><a class="btn" href="tuyen/quang-tri-sai-gon.html">Xem chuyến</a></div></div><div class="route" data-route="Quảng Trị Hà Nội"><div class="pic">🚌</div><div><b>Quảng Trị → Hà Nội</b><a class="btn" href="tuyen/quang-tri-ha-noi.html">Xem chuyến</a></div></div><div class="route" data-route="Quảng Trị Nha Trang"><div class="pic">🚌</div><div><b>Quảng Trị → Nha Trang</b><a class="btn" href="tuyen/quang-tri-nha-trang.html">Xem chuyến</a></div></div><div class="route" data-route="Quảng Trị Đồng Nai"><div class="pic">🚌</div><div><b>Quảng Trị → Đồng Nai</b><a class="btn" href="tuyen/quang-tri-dong-nai.html">Xem chuyến</a></div></div><div class="route" data-route="Quảng Bình Đà Lạt"><div class="pic">🚌</div><div><b>Quảng Bình → Đà Lạt</b><a class="btn" href="tuyen/quang-binh-da-lat.html">Xem chuyến</a></div></div><div class="route" data-route="Đà Nẵng Đà Lạt"><div class="pic">🚌</div><div><b>Đà Nẵng → Đà Lạt</b><a class="btn" href="tuyen/da-nang-da-lat.html">Xem chuyến</a></div></div><div class="route" data-route="Đà Nẵng Nha Trang"><div class="pic">🚌</div><div><b>Đà Nẵng → Nha Trang</b><a class="btn" href="tuyen/da-nang-nha-trang.html">Xem chuyến</a></div></div><div class="route" data-route="Huế Hà Nội"><div class="pic">🚌</div><div><b>Huế → Hà Nội</b><a class="btn" href="tuyen/hue-ha-noi.html">Xem chuyến</a></div></div><div class="route" data-route="Huế Sài Gòn"><div class="pic">🚌</div><div><b>Huế → Sài Gòn</b><a class="btn" href="tuyen/hue-sai-gon.html">Xem chuyến</a></div></div><div class="route" data-route="Huế Đà Lạt"><div class="pic">🚌</div><div><b>Huế → Đà Lạt</b><a class="btn" href="tuyen/hue-da-lat.html">Xem chuyến</a></div></div></div><div class="notice">💡 10 tuyến nổi bật được hiển thị ngay trên trang chủ. Các tuyến khác hãy chọn <b>điểm đi + điểm đến</b> ở ô tìm kiếm để mở thẳng trang tuyến.</div><p class="all-routes-link"><a href="routes.html">Xem tất cả 42 tuyến xe →</a></p></div></section><section class="section about-vuvexe">
-<div class="wrap">
-<div class="about-box">
-<h2>Vũ Vé Xe là gì?</h2>
-<p><b>Vũ Vé Xe</b> là thương hiệu hỗ trợ đặt vé xe toàn quốc, giúp khách hàng tìm kiếm và tham khảo các tuyến xe khách, limousine, xe giường nằm và dịch vụ thuê xe 4–7 chỗ.</p>
-<p>Với định hướng <b>uy tín – nhanh chóng – rõ ràng – tận tâm</b>, Vũ Vé Xe tập trung cung cấp thông tin tuyến, nhà xe, loại xe, giờ chạy và điểm đón/trả để khách dễ tham khảo trước khi đặt.</p>
-<p>Khách hàng có thể chọn tuyến trực tiếp trên website hoặc sử dụng ô <b>Tìm chuyến</b>. Khi cần hỗ trợ, thông tin đặt vé được tiếp nhận qua Zalo để kiểm tra chuyến phù hợp.</p>
-<p><b>Vũ Vé Xe đồng hành cùng hành khách trên hành trình đi toàn quốc.</b></p>
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vũ Vé Xe – Đặt vé xe khách toàn quốc</title>
+<meta name="description" content="Vũ Vé Xe hỗ trợ tra cứu tuyến xe, 42 bài viết nhà xe và 50 mẹo đi xe khách. Đặt vé qua Zalo.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f3f8fc;color:#222}
+header{background:#fff;border-bottom:1px solid #ddd}.head{max-width:1100px;margin:auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-weight:800;font-size:21px;color:#0757a6}.menu a{margin:0 7px;text-decoration:none;color:#173b72;font-weight:700;font-size:14px}.zalo{background:#087fda;color:#fff!important;padding:9px 13px;border-radius:20px;text-decoration:none}
+.hero{background:linear-gradient(135deg,#e9f7ff,#43b9df);padding:38px 16px}.wrap{max-width:1100px;margin:auto}.hero h1{color:#fff;font-size:32px;margin:0 0 10px}.hero p{color:#fff;font-weight:600}
+.search{background:#fff;border-radius:16px;padding:18px;display:grid;grid-template-columns:1fr 1fr 1fr .7fr 130px;gap:10px;box-shadow:0 4px 18px #0002}label{font-size:12px;color:#777}select,input{width:100%;padding:11px;border:1px solid #ccd5df;border-radius:9px;margin-top:5px;background:#fff}button{border:0;border-radius:10px;background:#087fda;color:#fff;font-weight:700;margin-top:17px;padding:11px}
+section{padding:28px 16px}.title{color:#0757a6}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.box{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 12px #0001;text-decoration:none;color:#222}.box h2{margin:0 0 7px;color:#0757a6}.box p{margin:5px 0;color:#666}.go{display:inline-block;margin-top:8px;color:#087fda;font-weight:700}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+footer{background:#064f88;color:#fff;text-align:center;padding:26px 16px}
+@media(max-width:700px){.menu{display:none}.search{grid-template-columns:1fr 1fr}.big,.grid{grid-template-columns:1fr}.hero h1{font-size:27px}}
+</style>
+</head>
+<body>
+<header><div class="head">
+<div class="logo">🚌 VŨ VÉ XE</div>
+<div class="menu"><a href="index.html">Trang chủ</a><a href="bai-viet.html">42 bài viết nhà xe</a><a href="tips.html">50 mẹo đi xe khách</a><a href="rental.html">Thuê xe</a><a href="routes.html">Tuyến xe</a><a href="contact.html">Liên hệ</a></div>
+<a class="zalo" href="https://zalo.me/0386003098">Zalo đặt vé</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<h1>VŨ VÉ XE – ĐẶT VÉ XE TOÀN QUỐC</h1>
+<p>Đặt vé nhanh • Giá tốt • Hỗ trợ tận tâm</p>
+<div class="search">
+<div><label>Điểm đi</label><select id="from"><option value="">Chọn điểm đi</option></select></div>
+<div><label>Điểm đến</label><select id="to"><option value="">Chọn điểm đến</option></select></div>
+<div><label>Ngày đi</label><input id="date" type="date"></div>
+<div><label>Số khách</label><input id="guests" type="number" min="1" value="1"></div>
+<button onclick="go()">Tìm chuyến</button>
 </div>
+</div></section>
+
+<section><div class="wrap">
+<h2 class="title">📚 Nội dung hữu ích</h2>
+<div class="big">
+<a class="box" href="bai-viet.html"><h2>🚍 42 bài viết về nhà xe</h2><p>Thông tin theo từng tuyến: nhà xe, giờ chạy, loại xe, điểm đón trả, kinh nghiệm đặt vé và Zalo liên hệ.</p><span class="go">Xem 42 bài viết →</span></a>
+<a class="box" href="tips.html"><h2>💡 50 mẹo đi xe khách</h2><p>Mỗi mẹo có một trang riêng: hành lý, chọn chỗ, đặt vé, say xe, điểm đón và kinh nghiệm đi đường dài.</p><span class="go">Xem 50 mẹo →</span></a>
 </div>
-</section><section class="section customer-feedback">
-<div class="wrap">
-<h2>💬 Khách hàng nói gì về chúng tôi?</h2>
-<div class="feedback-grid">
-<div class="feedback"><div class="stars">★★★★★</div><b>Tư vấn nhanh, dễ hiểu</b><p>Khách hàng có thể gửi tuyến, ngày đi và nhu cầu qua Zalo để được hỗ trợ kiểm tra chuyến.</p></div>
-<div class="feedback"><div class="stars">★★★★★</div><b>Dễ tìm tuyến xe</b><p>Website được sắp xếp theo tuyến để hành khách dễ xem nhà xe, loại xe và thông tin chuyến.</p></div>
-<div class="feedback"><div class="stars">★★★★★</div><b>Hỗ trợ tận tâm</b><p>Vũ Vé Xe hướng đến trải nghiệm đặt vé thuận tiện, rõ ràng và hỗ trợ khách trong quá trình lựa chọn.</p></div>
-</div>
-<div class="feedback-note">Các nội dung trên là giới thiệu về trải nghiệm dịch vụ; phản hồi đánh giá thực tế của khách hàng sẽ được cập nhật khi có xác nhận.</div>
-</div>
-</section><section class="section route-report"><div class="wrap"><div class="report-box"><div><h2>📢 Phản ánh thông tin chuyến xe</h2><p>Nếu bạn gặp thông tin chưa đúng về <b>tuyến, ghế ngồi, loại xe, điểm đón/trả hoặc thông tin trên vé</b>, vui lòng liên hệ để Vũ Vé Xe kiểm tra và hỗ trợ.</p></div><div class="report-actions"><a href="tel:0386003098">☎ 0386 003 098</a><a href="https://zalo.me/0386003098">💬 Phản ánh qua Zalo</a></div></div></div></section><section class="section"><div class="wrap"><div class="rental"><div><h2>🚗 Thuê xe dịch vụ 4 chỗ &amp; 7 chỗ</h2><p>Đưa đón sân bay • Tham quan • Du lịch • Công tác • Gia đình</p><a class="btn" href="rental.html">Xem chi tiết →</a></div><div class="cars">🚗 🚐</div></div></div></section><section class="section"><div class="wrap"><h2>🚌 Đặt vé chỉ với 3 bước</h2><div class="steps"><div class="step"><div class="num">1</div><b>Chọn tuyến xe</b><p>Chọn điểm đi, điểm đến và ngày đi.</p></div><div class="step"><div class="num">2</div><b>Xem nhà xe</b><p>Tham khảo loại xe, phòng, giờ và điểm đón trả.</p></div><div class="step"><div class="num">3</div><b>Đặt qua Zalo</b><p>Gửi thông tin để Vũ Vé Xe xác nhận trước khi chốt.</p></div></div></div></section><footer><div class="wrap foot"><div><b style="font-size:22px">🚌 VŨ VÉ XE</b><p>Đặt vé nhanh • Giá tốt • Hỗ trợ tận tâm</p></div><div><b>Vé xe</b><a href="routes.html">Tất cả tuyến xe</a><a href="tips.html">50 mẹo đi xe khách</a><a href="rental.html">Thuê xe 4–7 chỗ</a></div><div><b>Liên hệ</b><a href="https://zalo.me/0386003098">Nhắn Zalo</a></div></div><div class="copy">© 2026 Vũ Vé Xe. Dữ liệu chuyến xe mang tính tham khảo; điểm đón, điểm trả, giờ chạy và giá có thể thay đổi theo ngày/chuyến.</div></footer><div class="corner-mascot" aria-hidden="true"><img src="assets/linh-vat-vu-ve-xe.png" alt="Linh vật Vũ Vé Xe"/></div><div class="bottom">Cần đặt vé? <a href="https://zalo.me/0386003098">Nhắn Zalo</a></div><script src="script.js?v=12"></script></body></html>
+</div></section>
+
+<section><div class="wrap">
+<h2 class="title">🔥 Tuyến xe nổi bật</h2>
+<div class="grid">
+<a class="box" href="tuyen.html?from=Quảng%20Trị&to=Sài%20Gòn"><h2>Quảng Trị → Sài Gòn</h2><p>Xem chuyến →</p></a>
+<a class="box" href="tuyen.html?from=Quảng%20Trị&to=Hà%20Nội"><h2>Quảng Trị → Hà Nội</h2><p>Xem chuyến →</p></a>
+<a class="box" href="tuyen.html?from=Quảng Trị&to=Nha%20Trang"><h2>Quảng Trị → Nha Trang</h2><p>Xem chuyến →</p></a>
+<a class="box" href="tuyen.html?from=Quảng%20Trị&to=Đồng%20Nai"><h2>Quảng Trị → Đồng Nai</h2><p>Xem chuyến →</p></a>
+<a class="box" href="tuyen.html?from=Quảng%20Bình&to=Đà%20Lạt"><h2>Quảng Bình → Đà Lạt</h2><p>Xem chuyến →</p></a>
+<a class="box" href="tuyen.html?from=Đà%20Nẵng&to=Đà%20Lạt"><h2>Đà Nẵng → Đà Lạt</h2><p>Xem chuyến →</p></a>
+<a class="box" href="tuyen.html?from=Đà%20Nẵng&to=Nha%20Trang"><h2>Đà Nẵng → Nha Trang</h2><p>Xem chuyến →</p></a>
+<a class="box" href="tuyen.html?from=Huế&to=Hà%20Nội"><h2>Huế → Hà Nội</h2><p>Xem chuyến →</p></a>
+<a class="box" href="tuyen.html?from=Huế&to=Sài%20Gòn"><h2>Huế → Sài Gòn</h2><p>Xem chuyến →</p></a>
+<a class="box" href="tuyen.html?from=Huế&to=Đà%20Lạt"><h2>Huế → Đà Lạt</h2><p>Xem chuyến →</p></a>
+</div></div></section>
+
+<footer>VŨ VÉ XE<br>0386 003 098 · 0963 307 942 · <a href="https://zalo.me/0386003098" style="color:white">Zalo đặt vé</a></footer>
+
+<script>
+const routes=[["Quảng Trị","Hà Nội"],["Quảng Trị","Sài Gòn"],["Quảng Trị","Nha Trang"],["Quảng Trị","Đà Lạt"],["Quảng Trị","Quy Nhơn"],["Quảng Trị","Đà Nẵng"],["Quảng Trị","Đồng Nai"],["Quảng Trị","Vũng Tàu"],["Quảng Bình","Hà Nội"],["Quảng Bình","Sài Gòn"],["Quảng Bình","Đà Lạt"],["Quảng Bình","Nha Trang"],["Quảng Bình","Quy Nhơn"],["Quảng Bình","Đồng Nai"],["Quảng Bình","Vũng Tàu"],["Hà Nội","Huế"],["Hà Nội","Đà Nẵng"],["Hà Nội","Quảng Trị"],["Hà Nội","Quảng Bình"],["Huế","Hà Nội"],["Huế","Sài Gòn"],["Huế","Nha Trang"],["Huế","Đà Lạt"],["Huế","Quảng Trị"],["Huế","Quy Nhơn"],["Đà Nẵng","Hà Nội"],["Đà Nẵng","Sài Gòn"],["Đà Nẵng","Đà Lạt"],["Đà Nẵng","Nha Trang"],["Đà Nẵng","Quảng Trị"],["Đà Nẵng","Quảng Bình"],["Đà Lạt","Sài Gòn"],["Đà Lạt","Quảng Trị"],["Sài Gòn","Quảng Trị"],["Sài Gòn","Đà Lạt"],["Sài Gòn","Nha Trang"],["Nha Trang","Đà Lạt"],["Nha Trang","Sài Gòn"],["Nha Trang","Quảng Trị"],["Quy Nhơn","Nha Trang"],["Quy Nhơn","Quảng Trị"]];
+const f=document.getElementById("from"),t=document.getElementById("to");
+[...new Set(routes.map(x=>x[0]))].forEach(x=>f.add(new Option(x,x)));
+f.onchange=()=>{t.innerHTML='<option value="">Chọn điểm đến</option>';routes.filter(x=>x[0]===f.value).forEach(x=>t.add(new Option(x[1],x[1])))};
+function go(){if(!f.value||!t.value){alert("Vui lòng chọn điểm đi và điểm đến.");return}location.href="tuyen.html?from="+encodeURIComponent(f.value)+"&to="+encodeURIComponent(t.value)}
+</script>
+</body></html>
