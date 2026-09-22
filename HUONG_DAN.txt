@@ -1,0 +1,52 @@
+VŨ VÉ XE – 42 BÀI SEO FILE CỨNG
+
+Thư mục cần upload:
+bai-viet/
+
+Có đúng 42 file HTML, mỗi tuyến một bài.
+Các bài đều là HTML file cứng, không cần JavaScript để hiển thị.
+Không kèm linh vật.
+
+Danh sách 42 file:
+1. quang-tri-ha-noi.html
+2. quang-tri-sai-gon.html
+3. quang-tri-nha-trang.html
+4. quang-tri-da-lat.html
+5. quang-tri-quy-nhon.html
+6. quang-tri-da-nang.html
+7. quang-tri-dong-nai.html
+8. quang-tri-vung-tau.html
+9. quang-binh-ha-noi.html
+10. quang-binh-sai-gon.html
+11. quang-binh-da-lat.html
+12. quang-binh-nha-trang.html
+13. quang-binh-quy-nhon.html
+14. quang-binh-dong-nai.html
+15. quang-binh-vung-tau.html
+16. ha-noi-hue.html
+17. ha-noi-da-nang.html
+18. ha-noi-quang-tri.html
+19. ha-noi-quang-binh.html
+20. hue-ha-noi.html
+21. hue-sai-gon.html
+22. hue-nha-trang.html
+23. hue-da-lat.html
+24. da-nang-ha-noi.html
+25. da-nang-sai-gon.html
+26. da-nang-da-lat.html
+27. da-nang-nha-trang.html
+28. da-lat-sai-gon.html
+29. da-lat-quang-tri.html
+30. sai-gon-quang-tri.html
+31. sai-gon-da-lat.html
+32. sai-gon-nha-trang.html
+33. nha-trang-da-lat.html
+34. nha-trang-sai-gon.html
+35. nha-trang-quang-tri.html
+36. hue-quang-tri.html
+37. quy-nhon-nha-trang.html
+38. quy-nhon-quang-tri.html
+39. hue-quy-nhon.html
+40. da-nang-quang-tri.html
+41. da-nang-quang-binh.html
+42. quang-tri-quy-nhon-2.html
