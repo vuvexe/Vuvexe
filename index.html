@@ -85,19 +85,10 @@ function timChuyen(){
   const to = document.querySelector('.search .field:nth-child(2) select').value;
   const date = document.querySelector('.search input[type="date"]').value;
   const guests = document.querySelector('.search input[type="number"]').value || '1';
-
   if(!from || from === 'Chọn điểm đi' || !to || to === 'Chọn điểm đến'){
-    alert('Vui lòng chọn điểm đi và điểm đến.');
-    return;
+    alert('Vui lòng chọn điểm đi và điểm đến.'); return;
   }
-
-  const params = new URLSearchParams({
-    from: from,
-    to: to,
-    date: date,
-    guests: guests
-  });
-
+  const params = new URLSearchParams({from: from,to: to,date: date,guests: guests});
   window.location.href = 'tuyen.html?' + params.toString();
 }
 </script>

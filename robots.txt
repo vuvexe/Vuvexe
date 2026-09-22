@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://vuvexe.github.io/Vuvexe/sitemap.xml
+Allow: /tuyen/
+
+Sitemap: https://vuvexe.com/sitemap.xml
