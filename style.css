@@ -47,3 +47,11 @@
 
 .reverse-route{margin:12px 0;padding:10px 14px;background:#eef7ff;border-radius:10px}.reverse-route a{font-weight:700}
 .all-routes-link{text-align:center;margin:14px 0}.all-routes-link a{font-weight:800}
+
+/* V12 - linh vật Vũ Vé Xe và ô tìm kiếm chống lỗi đường dẫn */
+.brand-mascot{width:48px;height:48px;object-fit:cover;object-position:18% 88%;border-radius:12px;display:block}
+.hero-mascot-card{margin-top:18px;background:#fff;border-radius:18px;padding:14px;display:flex;gap:16px;align-items:center;box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.hero-mascot-card img{width:150px;height:120px;object-fit:cover;object-position:18% 88%;border-radius:14px}
+.hero-mascot-card b{font-size:19px;color:#0757a6}.hero-mascot-card p{margin:6px 0 10px;color:#555;line-height:1.5}.hero-zalo{display:inline-block;background:#00a884;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+.corner-mascot img{width:58px;height:58px;object-fit:cover;object-position:18% 88%;border-radius:50%;display:block}
+@media(max-width:600px){.hero-mascot-card{align-items:flex-start}.hero-mascot-card img{width:105px;height:105px}.hero-mascot-card b{font-size:16px}}
