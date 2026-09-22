@@ -1,9 +1,7 @@
-THAY INDEX.HTML DE SUA DUONG DAN CHO VUVEXE.COM
+FILE 42 TUYEN - MUC TUYEN
 
-1. Vao GitHub -> repository Vuvexe -> file index.html.
-2. Mo index.html va thay toan bo noi dung bang file index.html nay.
-3. Commit changes.
-4. Cho GitHub Pages build xong.
-5. Mo https://vuvexe.com/ va thu cac nut.
+Chi cap nhat thu muc tuyen/. Khong thay the tuyen.html.
 
-Ban nay giu nguyen giao dien/noi dung cua index hien tai, chi chuyen cac duong dan noi bo sang https://vuvexe.com/ de tranh bi them /Vuvexe/ khi truy cap.
+Thu muc tuyen/ gom 42 trang HTML, moi trang co toi da 15 nha xe, thong tin gio chay, loai xe, gia tham khao, diem don/tra va nut Zalo dat ve.
+
+Cac thong tin van hanh co the thay doi; can xac nhan truoc khi dat.
