@@ -1,69 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Vũ Vé Xe – Đặt vé xe khách toàn quốc</title>
-<meta name="description" content="Vũ Vé Xe hỗ trợ tra cứu tuyến xe, 42 bài viết nhà xe và 50 mẹo đi xe khách. Đặt vé qua Zalo.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VŨ VÉ XE – Đặt vé xe toàn quốc & Thuê xe</title>
+<meta name="description" content="Vũ Vé Xe hỗ trợ đặt vé xe khách toàn quốc và thuê xe 4 chỗ, 7 chỗ, 16 chỗ.">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f3f8fc;color:#222}
-header{background:#fff;border-bottom:1px solid #ddd}.head{max-width:1100px;margin:auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-weight:800;font-size:21px;color:#0757a6}.menu a{margin:0 7px;text-decoration:none;color:#173b72;font-weight:700;font-size:14px}.zalo{background:#087fda;color:#fff!important;padding:9px 13px;border-radius:20px;text-decoration:none}
-.hero{background:linear-gradient(135deg,#e9f7ff,#43b9df);padding:38px 16px}.wrap{max-width:1100px;margin:auto}.hero h1{color:#fff;font-size:32px;margin:0 0 10px}.hero p{color:#fff;font-weight:600}
-.search{background:#fff;border-radius:16px;padding:18px;display:grid;grid-template-columns:1fr 1fr 1fr .7fr 130px;gap:10px;box-shadow:0 4px 18px #0002}label{font-size:12px;color:#777}select,input{width:100%;padding:11px;border:1px solid #ccd5df;border-radius:9px;margin-top:5px;background:#fff}button{border:0;border-radius:10px;background:#087fda;color:#fff;font-weight:700;margin-top:17px;padding:11px}
-section{padding:28px 16px}.title{color:#0757a6}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.box{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 12px #0001;text-decoration:none;color:#222}.box h2{margin:0 0 7px;color:#0757a6}.box p{margin:5px 0;color:#666}.go{display:inline-block;margin-top:8px;color:#087fda;font-weight:700}
-.big{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-footer{background:#064f88;color:#fff;text-align:center;padding:26px 16px}
-@media(max-width:700px){.menu{display:none}.search{grid-template-columns:1fr 1fr}.big,.grid{grid-template-columns:1fr}.hero h1{font-size:27px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;background:#f4f9fc;color:#17324d}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,94%);margin:auto}
+header{height:64px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 22px;box-shadow:0 1px 8px #0001;position:sticky;top:0;z-index:10}
+.logo{font-weight:800;color:#075b9b;font-size:20px;white-space:nowrap}nav{display:flex;gap:20px;font-size:14px;font-weight:700}nav a:hover{color:#0787dc}.zalo{background:#087fda;color:#fff;padding:10px 18px;border-radius:22px;font-weight:700}
+.hero{background:linear-gradient(115deg,#82dced,#52c1e2);padding:42px 0 38px;color:#fff}.hero h1{font-size:36px;margin:0 0 10px}.hero p{font-size:17px;margin:0 0 22px;font-weight:600}
+.search{background:#fff;color:#17324d;border-radius:16px;padding:15px;display:grid;grid-template-columns:1.1fr 1.1fr 1fr .75fr auto;gap:10px;box-shadow:0 8px 22px #006b8b24}
+.field label{display:block;font-size:12px;color:#718294;margin-bottom:5px}.field select,.field input{width:100%;height:43px;border:1px solid #d9e1e8;border-radius:9px;padding:0 10px;background:#fff}.search button{border:0;background:#087fda;color:#fff;border-radius:10px;font-weight:800;padding:0 22px}
+section{padding:34px 0}.section-title{font-size:24px;color:#075b9b;margin:0 0 18px}.grid2,.route-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card,.route,.review,.vehicle{background:#fff;border-radius:14px;padding:18px;box-shadow:0 3px 14px #17324d12}
+.card h3,.vehicle h3{margin:0 0 7px;color:#075b9b}.card p,.vehicle p,.review p{color:#526577;line-height:1.5;font-size:14px}.link{color:#087fda;font-weight:800}
+.rental{background:linear-gradient(110deg,#eaf8ff,#f8fcff);border-radius:18px;padding:24px}.rental-head{display:flex;justify-content:space-between;align-items:end}.rental-head h2{margin:0;color:#075b9b}.rental-head p{margin:7px 0;color:#526577}.rental-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.vehicle{text-align:center}.vehicle .icon{font-size:50px}.features{text-align:left;color:#496276;font-size:14px;line-height:1.8}.details{display:block;background:#e5f6ff;color:#087fda;padding:9px;border-radius:10px;font-weight:800;margin-top:12px}
+.route strong{display:block;color:#075b9b;font-size:18px;margin-bottom:5px}.route small{color:#657687}
+.about{background:linear-gradient(110deg,#e8f7ff,#f7fcff);border-radius:18px;padding:24px}.about h2{color:#075b9b;margin-top:0}.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:28px;align-items:center}.about-intro{font-size:18px;font-weight:700;color:#075b9b;line-height:1.5}.about p{line-height:1.65;color:#526577}.purpose,.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.purpose div{background:#fff;border-radius:12px;padding:15px}.purpose b{display:block;color:#075b9b;margin-bottom:5px}.purpose span{font-size:13px;color:#607386}.reviews-head{display:flex;justify-content:space-between}.person{font-weight:800;color:#31526c}.stars{color:#ffb400;letter-spacing:1px}.review p{margin-bottom:0}
+footer{background:#075b91;color:#fff;text-align:center;padding:22px}.footer-title{font-weight:800;margin-bottom:5px}footer a{text-decoration:underline}
+@media(max-width:850px){header{height:auto;padding:10px 12px;gap:10px}nav{gap:10px;font-size:11px;overflow-x:auto;white-space:nowrap}.zalo{padding:8px 12px;font-size:12px}.hero h1{font-size:27px}.search{grid-template-columns:1fr 1fr}.search button{height:43px}.rental-grid{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr}.reviews{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.logo{font-size:16px}nav{max-width:55vw}.hero h1{font-size:24px}.hero p{font-size:14px}.grid2,.route-grid,.rental-grid,.reviews{grid-template-columns:1fr}.rental-head{display:block}.section-title{font-size:22px}.about{padding:18px}.purpose{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><div class="head">
-<div class="logo">🚌 VŨ VÉ XE</div>
-<div class="menu"><a href="index.html">Trang chủ</a><a href="bai-viet.html">42 bài viết nhà xe</a><a href="tips.html">50 mẹo đi xe khách</a><a href="rental.html">Thuê xe</a><a href="routes.html">Tuyến xe</a><a href="contact.html">Liên hệ</a></div>
+<header>
+<a class="logo" href="index.html">🚌 VŨ VÉ XE</a>
+<nav>
+<a href="index.html">Trang chủ</a><a href="bai-viet.html">42 bài viết nhà xe</a><a href="tips.html">50 mẹo đi xe khách</a><a href="thue-xe.html">Thuê xe</a><a href="tuyen.html">Tuyến xe</a><a href="#lien-he">Liên hệ</a>
+</nav>
 <a class="zalo" href="https://zalo.me/0386003098">Zalo đặt vé</a>
-</div></header>
+</header>
 
-<section class="hero"><div class="wrap">
-<h1>VŨ VÉ XE – ĐẶT VÉ XE TOÀN QUỐC</h1>
-<p>Đặt vé nhanh • Giá tốt • Hỗ trợ tận tâm</p>
+<section class="hero"><div class="container">
+<h1>VŨ VÉ XE – ĐẶT VÉ XE TOÀN QUỐC</h1><p>Đặt vé nhanh · Giá tốt · Hỗ trợ tận tâm</p>
 <div class="search">
-<div><label>Điểm đi</label><select id="from"><option value="">Chọn điểm đi</option></select></div>
-<div><label>Điểm đến</label><select id="to"><option value="">Chọn điểm đến</option></select></div>
-<div><label>Ngày đi</label><input id="date" type="date"></div>
-<div><label>Số khách</label><input id="guests" type="number" min="1" value="1"></div>
-<button onclick="go()">Tìm chuyến</button>
-</div>
-</div></section>
-
-<section><div class="wrap">
-<h2 class="title">📚 Nội dung hữu ích</h2>
-<div class="big">
-<a class="box" href="bai-viet.html"><h2>🚍 42 bài viết về nhà xe</h2><p>Thông tin theo từng tuyến: nhà xe, giờ chạy, loại xe, điểm đón trả, kinh nghiệm đặt vé và Zalo liên hệ.</p><span class="go">Xem 42 bài viết →</span></a>
-<a class="box" href="tips.html"><h2>💡 50 mẹo đi xe khách</h2><p>Mỗi mẹo có một trang riêng: hành lý, chọn chỗ, đặt vé, say xe, điểm đón và kinh nghiệm đi đường dài.</p><span class="go">Xem 50 mẹo →</span></a>
-</div>
-</div></section>
-
-<section><div class="wrap">
-<h2 class="title">🔥 Tuyến xe nổi bật</h2>
-<div class="grid">
-<a class="box" href="tuyen.html?from=Quảng%20Trị&to=Sài%20Gòn"><h2>Quảng Trị → Sài Gòn</h2><p>Xem chuyến →</p></a>
-<a class="box" href="tuyen.html?from=Quảng%20Trị&to=Hà%20Nội"><h2>Quảng Trị → Hà Nội</h2><p>Xem chuyến →</p></a>
-<a class="box" href="tuyen.html?from=Quảng Trị&to=Nha%20Trang"><h2>Quảng Trị → Nha Trang</h2><p>Xem chuyến →</p></a>
-<a class="box" href="tuyen.html?from=Quảng%20Trị&to=Đồng%20Nai"><h2>Quảng Trị → Đồng Nai</h2><p>Xem chuyến →</p></a>
-<a class="box" href="tuyen.html?from=Quảng%20Bình&to=Đà%20Lạt"><h2>Quảng Bình → Đà Lạt</h2><p>Xem chuyến →</p></a>
-<a class="box" href="tuyen.html?from=Đà%20Nẵng&to=Đà%20Lạt"><h2>Đà Nẵng → Đà Lạt</h2><p>Xem chuyến →</p></a>
-<a class="box" href="tuyen.html?from=Đà%20Nẵng&to=Nha%20Trang"><h2>Đà Nẵng → Nha Trang</h2><p>Xem chuyến →</p></a>
-<a class="box" href="tuyen.html?from=Huế&to=Hà%20Nội"><h2>Huế → Hà Nội</h2><p>Xem chuyến →</p></a>
-<a class="box" href="tuyen.html?from=Huế&to=Sài%20Gòn"><h2>Huế → Sài Gòn</h2><p>Xem chuyến →</p></a>
-<a class="box" href="tuyen.html?from=Huế&to=Đà%20Lạt"><h2>Huế → Đà Lạt</h2><p>Xem chuyến →</p></a>
+<div class="field"><label>Điểm đi</label><select><option>Chọn điểm đi</option><option>Quảng Trị</option><option>Huế</option><option>Đà Nẵng</option><option>Hà Nội</option><option>Sài Gòn</option></select></div>
+<div class="field"><label>Điểm đến</label><select><option>Chọn điểm đến</option><option>Sài Gòn</option><option>Hà Nội</option><option>Nha Trang</option><option>Đà Lạt</option></select></div>
+<div class="field"><label>Ngày đi</label><input type="date"></div><div class="field"><label>Số khách</label><input type="number" min="1" value="1"></div>
+<button type="button" onclick="alert('Vui lòng chọn tuyến để xem chuyến.')">Tìm chuyến</button>
 </div></div></section>
 
-<footer>VŨ VÉ XE<br>0386 003 098 · 0963 307 942 · <a href="https://zalo.me/0386003098" style="color:white">Zalo đặt vé</a></footer>
+<section><div class="container"><h2 class="section-title">📚 Nội dung hữu ích</h2><div class="grid2">
+<div class="card"><h3>🚌 42 bài viết về nhà xe</h3><p>Thông tin theo từng tuyến: nhà xe, giờ chạy, loại xe, điểm đón trả, kinh nghiệm đặt vé và Zalo liên hệ.</p><a class="link" href="bai-viet.html">Xem 42 bài viết →</a></div>
+<div class="card"><h3>💡 50 mẹo đi xe khách</h3><p>Mỗi mẹo có một trang riêng: hành lý, chọn chỗ, đặt vé, say xe, điểm đón và kinh nghiệm đi đường dài.</p><a class="link" href="tips.html">Xem 50 mẹo →</a></div>
+</div></div></section>
 
-<script>
-const routes=[["Quảng Trị","Hà Nội"],["Quảng Trị","Sài Gòn"],["Quảng Trị","Nha Trang"],["Quảng Trị","Đà Lạt"],["Quảng Trị","Quy Nhơn"],["Quảng Trị","Đà Nẵng"],["Quảng Trị","Đồng Nai"],["Quảng Trị","Vũng Tàu"],["Quảng Bình","Hà Nội"],["Quảng Bình","Sài Gòn"],["Quảng Bình","Đà Lạt"],["Quảng Bình","Nha Trang"],["Quảng Bình","Quy Nhơn"],["Quảng Bình","Đồng Nai"],["Quảng Bình","Vũng Tàu"],["Hà Nội","Huế"],["Hà Nội","Đà Nẵng"],["Hà Nội","Quảng Trị"],["Hà Nội","Quảng Bình"],["Huế","Hà Nội"],["Huế","Sài Gòn"],["Huế","Nha Trang"],["Huế","Đà Lạt"],["Huế","Quảng Trị"],["Huế","Quy Nhơn"],["Đà Nẵng","Hà Nội"],["Đà Nẵng","Sài Gòn"],["Đà Nẵng","Đà Lạt"],["Đà Nẵng","Nha Trang"],["Đà Nẵng","Quảng Trị"],["Đà Nẵng","Quảng Bình"],["Đà Lạt","Sài Gòn"],["Đà Lạt","Quảng Trị"],["Sài Gòn","Quảng Trị"],["Sài Gòn","Đà Lạt"],["Sài Gòn","Nha Trang"],["Nha Trang","Đà Lạt"],["Nha Trang","Sài Gòn"],["Nha Trang","Quảng Trị"],["Quy Nhơn","Nha Trang"],["Quy Nhơn","Quảng Trị"]];
-const f=document.getElementById("from"),t=document.getElementById("to");
-[...new Set(routes.map(x=>x[0]))].forEach(x=>f.add(new Option(x,x)));
-f.onchange=()=>{t.innerHTML='<option value="">Chọn điểm đến</option>';routes.filter(x=>x[0]===f.value).forEach(x=>t.add(new Option(x[1],x[1])))};
-function go(){if(!f.value||!t.value){alert("Vui lòng chọn điểm đi và điểm đến.");return}location.href="tuyen.html?from="+encodeURIComponent(f.value)+"&to="+encodeURIComponent(t.value)}
-</script>
+<section><div class="container"><h2 class="section-title">🔥 Tuyến xe nổi bật</h2><div class="route-grid">
+<a class="route" href="tuyen.html?from=Quảng%20Trị&to=Sài%20Gòn"><strong>Quảng Trị → Sài Gòn</strong><small>Xem chuyến →</small></a>
+<a class="route" href="tuyen.html?from=Quảng%20Trị&to=Hà%20Nội"><strong>Quảng Trị → Hà Nội</strong><small>Xem chuyến →</small></a>
+<a class="route" href="tuyen.html?from=Quảng%20Trị&to=Nha%20Trang"><strong>Quảng Trị → Nha Trang</strong><small>Xem chuyến →</small></a>
+<a class="route" href="tuyen.html?from=Quảng%20Trị&to=Đồng%20Nai"><strong>Quảng Trị → Đồng Nai</strong><small>Xem chuyến →</small></a>
+<a class="route" href="tuyen.html?from=Quảng%20Bình&to=Đà%20Lạt"><strong>Quảng Bình → Đà Lạt</strong><small>Xem chuyến →</small></a>
+<a class="route" href="tuyen.html?from=Đà%20Nẵng&to=Đà%20Lạt"><strong>Đà Nẵng → Đà Lạt</strong><small>Xem chuyến →</small></a>
+<a class="route" href="tuyen.html?from=Đà%20Nẵng&to=Nha%20Trang"><strong>Đà Nẵng → Nha Trang</strong><small>Xem chuyến →</small></a>
+<a class="route" href="tuyen.html?from=Huế&to=Hà%20Nội"><strong>Huế → Hà Nội</strong><small>Xem chuyến →</small></a>
+<a class="route" href="tuyen.html?from=Huế&to=Sài%20Gòn"><strong>Huế → Sài Gòn</strong><small>Xem chuyến →</small></a>
+<a class="route" href="tuyen.html?from=Huế&to=Đà%20Lạt"><strong>Huế → Đà Lạt</strong><small>Xem chuyến →</small></a>
+</div></div></section>
+
+<section><div class="container rental"><div class="rental-head"><div><h2>🚗 Thuê xe du lịch – Xe hợp đồng</h2><p>Thuê xe 4c, 7c, 16c – An toàn, tiện lợi, giá hợp lý</p></div><a class="link" href="thue-xe.html">Xem tất cả dịch vụ thuê xe →</a></div>
+<div class="rental-grid">
+<div class="vehicle"><div class="icon">🚗</div><h3>Thuê xe 4 chỗ</h3><p>Phù hợp đi công tác, du lịch gia đình, đưa đón sân bay.</p><div class="features">⏱ Linh hoạt lịch trình<br>👤 Giá tốt – Tài xế chuyên nghiệp</div><a class="details" href="thue-xe.html#4cho">Xem chi tiết →</a></div>
+<div class="vehicle"><div class="icon">🚙</div><h3>Thuê xe 7 chỗ</h3><p>Rộng rãi, thoải mái cho gia đình và nhóm bạn.</p><div class="features">⏱ Linh hoạt lịch trình<br>👤 Giá tốt – Tài xế chuyên nghiệp</div><a class="details" href="thue-xe.html#7cho">Xem chi tiết →</a></div>
+<div class="vehicle"><div class="icon">🚐</div><h3>Thuê xe 16 chỗ</h3><p>Phù hợp đoàn khách, công ty, du lịch, sự kiện, cưới hỏi.</p><div class="features">⏱ Linh hoạt lịch trình<br>👤 Giá tốt – Tài xế chuyên nghiệp</div><a class="details" href="thue-xe.html#16cho">Xem chi tiết →</a></div>
+</div></div></section>
+
+<section><div class="container about"><h2>👨‍💼 Vũ Vé Xe là ai? Mục đích hoạt động</h2><div class="about-grid">
+<div class="about-intro">Vũ Vé Xe là kênh hỗ trợ đặt vé xe khách toàn quốc, đồng thời cung cấp thông tin và dịch vụ thuê xe 4 chỗ, 7 chỗ, 16 chỗ.</div>
+<div><p><b>Mục tiêu:</b> giúp khách dễ dàng tìm được chuyến xe phù hợp, biết rõ thông tin tuyến, giờ chạy, điểm đón và cách liên hệ trước khi đặt vé.</p>
+<p><b>Mục đích hoạt động:</b> tập trung thông tin nhiều tuyến trên một nơi, hỗ trợ khách nhanh qua Zalo và cung cấp thêm lựa chọn thuê xe khi khách có nhu cầu đi riêng hoặc đi theo nhóm.</p>
+<div class="purpose"><div><b>🎯 Tư vấn</b><span>Tư vấn tuyến và thông tin chuyến rõ ràng.</span></div><div><b>❤️ Tận tâm</b><span>Hỗ trợ nhanh, ưu tiên trải nghiệm thuận tiện.</span></div><div><b>🤝 Đồng hành</b><span>Hỗ trợ từ lúc tìm chuyến đến khi đặt vé.</span></div></div>
+</div></div></div></section>
+
+<section id="danh-gia"><div class="container"><div class="reviews-head"><h2 class="section-title">💬 Khách hàng nói gì về chúng tôi?</h2><a class="link" href="#lien-he">Gửi đánh giá →</a></div><div class="reviews">
+<div class="review"><div class="person">Trần Minh Tuấn</div><div class="stars">★★★★★</div><p>Đặt vé nhanh, tư vấn nhiệt tình. Nhà xe chất lượng, đúng giờ. Sẽ tiếp tục ủng hộ!</p></div>
+<div class="review"><div class="person">Hồng Nhung</div><div class="stars">★★★★★</div><p>Thuê xe 7 chỗ đi Đà Lạt rất ok, xe sạch sẽ, tài xế thân thiện. Cảm ơn Vũ Vé Xe!</p></div>
+<div class="review"><div class="person">Lê Quốc Bảo</div><div class="stars">★★★★★</div><p>Thông tin tuyến xe đầy đủ, dễ tìm. Hỗ trợ qua Zalo rất nhanh, chuyên nghiệp.</p></div>
+</div></div></section>
+<footer id="lien-he"><div class="footer-title">VŨ VÉ XE</div>0386 003 098 · 0963 307 942 · <a href="https://zalo.me/0386003098">Zalo đặt vé</a></footer>
 </body></html>
