@@ -38,7 +38,7 @@ footer{background:#075b91;color:#fff;text-align:center;padding:22px}.footer-titl
 <div class="field"><label>Điểm đi</label><select><option>Chọn điểm đi</option><option>Quảng Trị</option><option>Huế</option><option>Đà Nẵng</option><option>Hà Nội</option><option>Sài Gòn</option></select></div>
 <div class="field"><label>Điểm đến</label><select><option>Chọn điểm đến</option><option>Sài Gòn</option><option>Hà Nội</option><option>Nha Trang</option><option>Đà Lạt</option></select></div>
 <div class="field"><label>Ngày đi</label><input type="date"></div><div class="field"><label>Số khách</label><input type="number" min="1" value="1"></div>
-<button type="button" onclick="alert('Vui lòng chọn tuyến để xem chuyến.')">Tìm chuyến</button>
+<button type="button" onclick="timChuyen()">Tìm chuyến</button>
 </div></div></section>
 
 <section><div class="container"><h2 class="section-title">📚 Nội dung hữu ích</h2><div class="grid2">
@@ -79,4 +79,26 @@ footer{background:#075b91;color:#fff;text-align:center;padding:22px}.footer-titl
 <div class="review"><div class="person">Lê Quốc Bảo</div><div class="stars">★★★★★</div><p>Thông tin tuyến xe đầy đủ, dễ tìm. Hỗ trợ qua Zalo rất nhanh, chuyên nghiệp.</p></div>
 </div></div></section>
 <footer id="lien-he"><div class="footer-title">VŨ VÉ XE</div>0386 003 098 · 0963 307 942 · <a href="https://zalo.me/0386003098">Zalo đặt vé</a></footer>
+<script>
+function timChuyen(){
+  const from = document.querySelector('.search .field:nth-child(1) select').value;
+  const to = document.querySelector('.search .field:nth-child(2) select').value;
+  const date = document.querySelector('.search input[type="date"]').value;
+  const guests = document.querySelector('.search input[type="number"]').value || '1';
+
+  if(!from || from === 'Chọn điểm đi' || !to || to === 'Chọn điểm đến'){
+    alert('Vui lòng chọn điểm đi và điểm đến.');
+    return;
+  }
+
+  const params = new URLSearchParams({
+    from: from,
+    to: to,
+    date: date,
+    guests: guests
+  });
+
+  window.location.href = 'tuyen.html?' + params.toString();
+}
+</script>
 </body></html>
