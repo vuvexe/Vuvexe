@@ -35,8 +35,8 @@ footer{background:#075b91;color:#fff;text-align:center;padding:22px}.footer-titl
 <section class="hero"><div class="container">
 <h1>VŨ VÉ XE – ĐẶT VÉ XE TOÀN QUỐC</h1><p>Đặt vé nhanh · Giá tốt · Hỗ trợ tận tâm</p>
 <div class="search">
-<div class="field"><label>Điểm đi</label><select><option>Chọn điểm đi</option><option>Quảng Trị</option><option>Huế</option><option>Đà Nẵng</option><option>Hà Nội</option><option>Sài Gòn</option></select></div>
-<div class="field"><label>Điểm đến</label><select><option>Chọn điểm đến</option><option>Sài Gòn</option><option>Hà Nội</option><option>Nha Trang</option><option>Đà Lạt</option></select></div>
+<div class="field"><label>Điểm đi</label><select id="diemDi"><option value="">Chọn điểm đi</option><option>Quảng Trị</option><option>Quảng Bình</option><option>Huế</option><option>Đà Nẵng</option><option>Quy Nhơn</option><option>Đà Lạt</option><option>Nha Trang</option><option>Sài Gòn</option><option>Đồng Nai</option><option>Vũng Tàu</option><option>Hà Nội</option><option>Quảng Nam</option><option>Quảng Ngãi</option></select></div>
+<div class="field"><label>Điểm đến</label><select id="diemDen"><option value="">Chọn điểm đến</option><option>Quảng Trị</option><option>Quảng Bình</option><option>Huế</option><option>Đà Nẵng</option><option>Quy Nhơn</option><option>Nha Trang</option><option>Đà Lạt</option><option>Sài Gòn</option><option>Đồng Nai</option><option>Vũng Tàu</option><option>Hà Nội</option><option>Quảng Nam</option><option>Quảng Ngãi</option></select></div>
 <div class="field"><label>Ngày đi</label><input type="date"></div><div class="field"><label>Số khách</label><input type="number" min="1" value="1"></div>
 <button type="button" onclick="timChuyen()">Tìm chuyến</button>
 </div></div></section>
@@ -80,16 +80,32 @@ footer{background:#075b91;color:#fff;text-align:center;padding:22px}.footer-titl
 </div></div></section>
 <footer id="lien-he"><div class="footer-title">VŨ VÉ XE</div>0386 003 098 · 0963 307 942 · <a href="https://zalo.me/0386003098">Zalo đặt vé</a></footer>
 <script>
+function slugifyRoute(text){
+  return text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'d').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+}
 function timChuyen(){
-  const from = document.querySelector('.search .field:nth-child(1) select').value;
-  const to = document.querySelector('.search .field:nth-child(2) select').value;
+  const from = document.getElementById('diemDi').value;
+  const to = document.getElementById('diemDen').value;
   const date = document.querySelector('.search input[type="date"]').value;
   const guests = document.querySelector('.search input[type="number"]').value || '1';
-  if(!from || from === 'Chọn điểm đi' || !to || to === 'Chọn điểm đến'){
-    alert('Vui lòng chọn điểm đi và điểm đến.'); return;
+
+  if(!from || !to){
+    alert('Vui lòng chọn điểm đi và điểm đến.');
+    return;
   }
-  const params = new URLSearchParams({from: from,to: to,date: date,guests: guests});
-  window.location.href = 'tuyen.html?' + params.toString();
+  if(from === to){
+    alert('Điểm đi và điểm đến không được giống nhau.');
+    return;
+  }
+
+  const routeSlug = slugifyRoute(from) + '-' + slugifyRoute(to);
+  const staticRoutes = ["da-lat-da-nang","da-lat-hue","da-lat-nha-trang","da-lat-quang-binh","da-lat-quang-nam","da-lat-quang-ngai","da-lat-quang-tri","da-lat-quy-nhon","da-lat-sai-gon","da-nang-da-lat","da-nang-dong-nai","da-nang-ha-noi","da-nang-nha-trang","da-nang-quang-tri","da-nang-quy-nhon","da-nang-sai-gon","dong-nai-da-nang","dong-nai-hue","dong-nai-quang-binh","dong-nai-quang-tri","ha-noi-da-nang","ha-noi-hue","ha-noi-quang-binh","ha-noi-quang-tri","hue-da-lat","hue-dong-nai","hue-ha-noi","hue-nha-trang","hue-quy-nhon","hue-sai-gon","hue-vung-tau","nha-trang-da-lat","nha-trang-da-nang","nha-trang-hue","nha-trang-quang-binh","nha-trang-quang-tri","nha-trang-sai-gon","quang-binh-da-lat","quang-binh-dong-nai","quang-binh-ha-noi","quang-binh-nha-trang","quang-binh-quy-nhon","quang-binh-sai-gon","quang-binh-vung-tau","quang-nam-da-lat","quang-ngai-da-lat","quang-tri-da-lat","quang-tri-da-nang","quang-tri-dong-nai","quang-tri-ha-noi","quang-tri-nha-trang","quang-tri-quy-nhon","quang-tri-sai-gon","quang-tri-vung-tau","quy-nhon-da-lat","quy-nhon-da-nang","quy-nhon-hue","quy-nhon-quang-binh","quy-nhon-quang-tri","sai-gon-da-lat","sai-gon-da-nang","sai-gon-hue","sai-gon-nha-trang","sai-gon-quang-binh","sai-gon-quang-tri","vung-tau-hue","vung-tau-quang-binh","vung-tau-quang-tri"];
+  const params = new URLSearchParams({from: from, to: to, date: date, guests: guests});
+  if(staticRoutes.includes(routeSlug)){
+    window.location.href = 'tuyen/' + routeSlug + '.html' + (date || guests ? '?' + new URLSearchParams({date: date, guests: guests}).toString() : '');
+  } else {
+    window.location.href = 'tuyen.html?' + params.toString();
+  }
 }
 </script>
 </body></html>
