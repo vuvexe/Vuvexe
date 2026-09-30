@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /tuyen/
 
 Sitemap: https://vuvexe.com/sitemap.xml
+Sitemap: https://vuvexe.com/sitemap-tuyen.xml
