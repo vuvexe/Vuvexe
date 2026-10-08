@@ -55,3 +55,8 @@
 .hero-mascot-card b{font-size:19px;color:#0757a6}.hero-mascot-card p{margin:6px 0 10px;color:#555;line-height:1.5}.hero-zalo{display:inline-block;background:#00a884;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
 .corner-mascot img{width:58px;height:58px;object-fit:cover;object-position:18% 88%;border-radius:50%;display:block}
 @media(max-width:600px){.hero-mascot-card{align-items:flex-start}.hero-mascot-card img{width:105px;height:105px}.hero-mascot-card b{font-size:16px}}
+.brand-logo{display:block;height:60px;width:auto}.footer-logo{display:block;height:76px;width:auto;background:#fff;border-radius:12px;padding:6px 10px;margin:0 0 10px}
+@media(max-width:900px){.brand-logo{height:52px}}
+@media(max-width:560px){.brand-logo{height:48px}}
+header>.wrap>div.brand .brand-logo{height:40px}.footer-logo-plain{background:none;padding:0}
+header:not([class])>.wrap{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center}header:not([class])>.wrap>div.brand{grid-row:span 2;min-width:0}
