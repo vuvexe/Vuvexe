@@ -11,6 +11,21 @@
 .brand-logo{display:block;height:44px;width:auto;background:#fff;border-radius:10px;padding:3px 8px;margin:-8px 0}@media(max-width:600px){.brand-logo{height:38px;padding:3px 6px}}.footer-logo{display:block;height:76px;width:auto;background:#fff;border-radius:12px;padding:6px 10px;margin:0 auto 10px}
 </style>
 <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><meta property="og:image" content="https://vuvexe.com/assets/og-vu-ve-xe.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Logo Vũ Vé Xe">
+<!-- GA4 vuvexe.com: chỉ gửi đường dẫn đã bỏ ?query, không gửi họ tên, SĐT, ngày đi -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYVXTDE4SY"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-YYVXTDE4SY');
+(function(){if(window.__vvxGa)return;window.__vvxGa=1;
+function u(h){return String(h||'').split(/[?#]/)[0].slice(0,100);}
+function v(id){var e=document.getElementById(id);return e?String(e.value||'').slice(0,40):'';}
+document.addEventListener('click',function(e){var t=e.target;if(!t||!t.closest)return;
+var b=t.closest('.send,.book-btn');
+if(b){gtag('event',b.classList.contains('send')?'booking_request_click':'booking_form_open',{route_from:v('from'),route_to:v('to')});return;}
+var a=t.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';
+if(h.indexOf('zalo.me')>-1)gtag('event','click_zalo',{link_url:u(h)});
+else if(h.indexOf('tel:')===0)gtag('event','click_call',{link_url:u(h)});},true);})();
+</script>
 </head>
 <body>
 <header><div class="header-inner"><div class="logo"><picture><source srcset="assets/logo-vu-ve-xe.webp" type="image/webp"><img class="brand-logo" src="assets/logo-vu-ve-xe.png" alt="Vũ Vé Xe" width="360" height="282"></picture></div><a class="zalo" href="https://zalo.me/0386003098">Zalo: 0386 003 098</a></div></header>
