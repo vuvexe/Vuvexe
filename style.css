@@ -78,3 +78,4 @@ header:not([class])>.wrap{display:grid;grid-template-columns:auto 1fr;column-gap
 .route-phone,.phone{font-size:14px!important}
 @media(max-width:700px){.route-phone,.phone{font-size:13px!important}}
 @media(min-width:901px){.seo-text{font-size:18px}.seo-text h2{font-size:28px}.seo-text h3{font-size:22px}.pagehead h1{font-size:36px}.dest-section~.section h2{font-size:28px}}
+@media(max-width:900px){.seo-text{font-size:18px}.seo-text h2{font-size:24px}.seo-text h3{font-size:20px}.pagehead h1{font-size:30px}.dest-section~.section h2{font-size:25px}.menu a{font-size:14px}.guide-toc .badge{font-size:15px}.summary-card b,.route b{font-size:17px}.summary-card span,.route .btn{font-size:15px}.op p,.notice,.reviewbox,.source,.action-phone b{font-size:15px}.feedback p,.report-box p{font-size:16px}.bottom{font-size:15px}.route-phone,.phone{font-size:14px!important}}
