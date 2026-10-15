@@ -60,3 +60,9 @@
 @media(max-width:560px){.brand-logo{height:48px}}
 header>.wrap>div.brand .brand-logo{height:40px}.footer-logo-plain{background:none;padding:0}
 header:not([class])>.wrap{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center}header:not([class])>.wrap>div.brand{grid-row:span 2;min-width:0}
+.dest-section{padding:8px 0 0}
+.dest-banners{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1720px;margin:auto;padding:0 32px}
+.dest-banner{display:block;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(0,60,120,.15);transition:transform .2s}
+.dest-banner:hover{transform:translateY(-2px)}.dest-banner img{display:block;width:100%;height:auto}
+.dest-section+.section{padding-top:22px}
+@media(max-width:700px){.dest-banners{grid-template-columns:1fr;padding:0 16px}}
