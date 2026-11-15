@@ -1,0 +1,147 @@
+/* =====================================================================
+   Vũ Vé Xe – Giao diện Tết 2027 dùng chung (tet-2027-global.css)
+   - Chỉ đổi màu/trang trí các thành phần có sẵn + banner lì xì 100K.
+   - Không đổi chữ, H1/H2, link, form, bảng tóm tắt nhà xe (giữ header xanh).
+   - Class mới đều có tiền tố tet2027-.
+   - Phần đổi màu bọc trong :has() để KHÔNG tác động trang chủ (đã có tet-2027.css,
+     header .tet-header). Trình duyệt quá cũ không hỗ trợ :has() sẽ giữ giao diện cũ.
+   - Bảng màu lấy theo trang chủ Tết đã duyệt (tet-2027.css).
+   ===================================================================== */
+:root {
+  --tet2027-navy: #0b2a5b;
+  --tet2027-navy2: #123d7a;
+  --tet2027-red: #c8102e;
+  --tet2027-red2: #e3262f;
+  --tet2027-red-dark: #9e0c22;
+  --tet2027-gold: #ffc83d;
+  --tet2027-gold2: #ffe08a;
+  --tet2027-cream: #fff8ec;
+  --tet2027-ink: #3a1d12;
+}
+
+/* ---------- 1. Banner lì xì 100K (dùng chung mọi trang) ---------- */
+.tet2027-lixi-wrap { max-width: 1009px; margin: 18px auto; }
+.pagehead + .tet2027-lixi-wrap { padding: 0 14px; margin: 22px auto -8px; }   /* bài viết: khối tiêu đề tràn viền */
+.tet2027-lixi {
+  display: block; line-height: 0; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 6px 18px rgba(158, 12, 34, .18); outline-offset: 3px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.tet2027-lixi img { display: block; width: 100%; height: auto; aspect-ratio: 1009 / 234; }
+.tet2027-lixi:hover, .tet2027-lixi:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(158, 12, 34, .26); }
+.tet2027-lixi:focus-visible { outline: 3px solid var(--tet2027-gold); }
+@media (max-width: 600px) {                               /* điện thoại: dùng bản banner 1080×820 */
+  .tet2027-lixi-wrap { margin: 12px auto 14px; }
+  .tet2027-lixi { border-radius: 12px; }
+  .tet2027-lixi img { aspect-ratio: 1080 / 820; }
+}
+@media (prefers-reduced-motion: reduce) { .tet2027-lixi { transition: none; } .tet2027-lixi:hover { transform: none; } }
+
+/* ---------- 2. Nền và chữ chung ---------- */
+body:not(:has(.tet-header)) { background: #fffaf3; }
+
+/* ---------- 3. Header ---------- */
+/* 3a. Trang tuyến: header nền xanh (header.top / header thường) */
+body:not(:has(.tet-header)) header.top,
+body:not(:has(.tet-header)) header:not([class]) {
+  background: linear-gradient(100deg, var(--tet2027-navy), var(--tet2027-navy2));
+  border-bottom: 3px solid var(--tet2027-gold);
+}
+body:not(:has(.tet-header)) header.top .head-right a,
+body:not(:has(.tet-header)) header:not([class]) a { color: var(--tet2027-gold2); }
+body:not(:has(.tet-header)) header:not([class]) .zalo { background: var(--tet2027-red); color: #fff; }
+
+/* 3b. Bài viết / trang gốc: header trắng có menu */
+body:not(:has(.tet-header)) .header {
+  background: linear-gradient(100deg, var(--tet2027-navy), var(--tet2027-navy2));
+  border-bottom: 3px solid var(--tet2027-gold);
+}
+body:not(:has(.tet-header)) .header .brand-logo { background: #fff; border-radius: 10px; padding: 3px 8px; }
+body:not(:has(.tet-header)) .header .brand small,
+body:not(:has(.tet-header)) .header .brand b { color: var(--tet2027-gold2); }
+body:not(:has(.tet-header)) .header .menu a {
+  background: rgba(255, 255, 255, .1); color: #fff; border: 1px solid rgba(255, 200, 61, .35);
+}
+body:not(:has(.tet-header)) .header .menu a:hover,
+body:not(:has(.tet-header)) .header .menu a:focus-visible { background: var(--tet2027-gold); color: var(--tet2027-ink); }
+
+/* ---------- 4. Khối tiêu đề + đường phân cách ---------- */
+body:not(:has(.tet-header)) .route-head,
+body:not(:has(.tet-header)) .pagehead {
+  position: relative;
+  background: linear-gradient(180deg, #fff 0%, var(--tet2027-cream) 100%);
+  border-top: 4px solid var(--tet2027-red);
+}
+body:not(:has(.tet-header)) .pagehead { border-bottom: 2px solid var(--tet2027-gold); }
+body:not(:has(.tet-header)) .route-head h1,
+body:not(:has(.tet-header)) .pagehead h1,
+body:not(:has(.tet-header)) .article h1 { color: var(--tet2027-red-dark); }
+body:not(:has(.tet-header)) .breadcrumb a,
+body:not(:has(.tet-header)) a.back { color: var(--tet2027-red); }
+
+/* hoa mai / hoa đào nhỏ ở góc khối tiêu đề – chỉ màn hình rộng, không che chữ */
+@media (min-width: 901px) {
+  body:not(:has(.tet-header)) .route-head,
+  body:not(:has(.tet-header)) .pagehead .wrap { position: relative; padding-right: 150px; }
+  body:not(:has(.tet-header)) .route-head::after,
+  body:not(:has(.tet-header)) .pagehead .wrap::after {
+    content: ""; position: absolute; top: 6px; right: 8px; width: 130px; height: 78px;
+    background: url("assets/tet-2027/mai.svg") no-repeat right top / contain; opacity: .95; pointer-events: none;
+  }
+}
+
+/* Tiêu đề mục trong bài và thẻ */
+body:not(:has(.tet-header)) .seo-text h2,
+body:not(:has(.tet-header)) .article h2,
+body:not(:has(.tet-header)) .company h2 { color: var(--tet2027-red-dark); }
+body:not(:has(.tet-header)) .seo-text h2,
+body:not(:has(.tet-header)) article.article h2 { border-bottom: 2px solid var(--tet2027-gold2); padding-bottom: 6px; }
+body:not(:has(.tet-header)) .seo-text h3,
+body:not(:has(.tet-header)) .article h3 { color: var(--tet2027-navy2); }
+
+/* ---------- 5. Thẻ tuyến / nhà xe / bài viết ---------- */
+body:not(:has(.tet-header)) .company,
+body:not(:has(.tet-header)) .summary-card,
+body:not(:has(.tet-header)) .op,
+body:not(:has(.tet-header)) .route { border-top: 3px solid var(--tet2027-gold); }
+body:not(:has(.tet-header)) .price { color: var(--tet2027-red); background: var(--tet2027-cream); border: 1px solid var(--tet2027-gold2); }
+body:not(:has(.tet-header)) .pickup-drop { border-left-color: var(--tet2027-red); background: #fffdf8; }
+body:not(:has(.tet-header)) .summary-card b { color: var(--tet2027-red-dark); }
+
+/* ---------- 6. Nút đặt vé / Zalo ---------- */
+/* .btn trong khối tiêu đề trang tuyến là link chữ (CSS gốc không định nghĩa .btn) → giữ nguyên */
+body:not(:has(.tet-header)) .book-btn,
+body:not(:has(.tet-header)) .send,
+body:not(:has(.tet-header)) .btn:not(.route-head .btn),
+body:not(:has(.tet-header)) .phone {
+  background: linear-gradient(180deg, var(--tet2027-red2), var(--tet2027-red)); color: #fff;
+  box-shadow: 0 3px 10px rgba(200, 16, 46, .22);
+}
+body:not(:has(.tet-header)) .btn.zalo,
+body:not(:has(.tet-header)) .quick-zalo { background: var(--tet2027-gold); color: var(--tet2027-ink); }
+body:not(:has(.tet-header)) .book-btn:hover, body:not(:has(.tet-header)) .send:hover,
+body:not(:has(.tet-header)) .btn:not(.route-head .btn):hover { filter: brightness(1.06); }
+body:not(:has(.tet-header)) .contact-now { background: var(--tet2027-cream); color: var(--tet2027-ink); border: 1px solid var(--tet2027-gold2); }
+body:not(:has(.tet-header)) .contact-now a { color: var(--tet2027-red); }
+
+/* ---------- 7. Thông báo / khuyến mãi ---------- */
+/* .notice trong bài viết cũ (article.article) không có kiểu gốc → giữ nguyên */
+body:not(:has(.tet-header)) .notice:not(.article .notice),
+body:not(:has(.tet-header)) .note { background: var(--tet2027-cream); border-left: 5px solid var(--tet2027-red); color: var(--tet2027-ink); }
+body:not(:has(.tet-header)) .badge { background: var(--tet2027-gold2); color: var(--tet2027-red-dark); }
+body:not(:has(.tet-header)) article.article { border-top: 4px solid var(--tet2027-red); }
+body:not(:has(.tet-header)) .article > .nav a,
+body:not(:has(.tet-header)) .wrap > .nav a { color: var(--tet2027-red); }
+
+/* Thanh liên hệ cố định ở đáy bài viết */
+body:not(:has(.tet-header)) .bottom { background: linear-gradient(100deg, var(--tet2027-red-dark), var(--tet2027-red)); }
+body:not(:has(.tet-header)) .bottom a { color: var(--tet2027-red-dark); }
+body:not(:has(.tet-header)) .bottom a[href*="zalo.me"] { background: var(--tet2027-gold); color: var(--tet2027-ink); }
+
+/* ---------- 8. Footer ---------- */
+body:not(:has(.tet-header)) footer {
+  background: linear-gradient(180deg, var(--tet2027-navy2), var(--tet2027-navy));
+  border-top: 3px solid var(--tet2027-gold);
+}
+body:not(:has(.tet-header)) footer .copy { background: rgba(0, 0, 0, .18); }
+body:not(:has(.tet-header)) footer a { color: var(--tet2027-gold2); }
