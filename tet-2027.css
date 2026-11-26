@@ -249,3 +249,34 @@ body.tet .bottom{background:var(--tet-navy)}
 .tet-extra .step p{margin:2px 0 0;color:#6b4a35;font-size:14px}
 .tet-extra>.section:last-child h2{text-align:center}
 @media (max-width:900px){.tet-extra{grid-template-columns:1fr}.tet-extra .steps{grid-template-columns:1fr}}
+
+/* ===== Điện thoại (≤600px) – chỉnh 26/11/2026: header gọn, chữ dễ đọc, ô tìm vé lên màn hình đầu ===== */
+@media (max-width:600px){
+ body.tet{padding-bottom:52px}
+ .tet-header .tet-wrap{padding:0 12px}
+ .tet-nav{gap:6px 8px;padding:8px 0 0;min-height:0}
+ .tet-brand{flex:0 0 auto}
+ .tet-brand img{height:44px;width:auto}
+ .tet-cta{font-size:13px;padding:9px 14px;white-space:nowrap;margin-left:auto;max-width:calc(100% - 92px)}
+ .tet-menu{margin:0 -12px;padding:2px 12px 0;gap:0;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+ .tet-menu a{font-size:15px;padding:10px 11px;white-space:nowrap;flex:0 0 auto}
+ /* hero: 1 cột, thứ tự H1 → chiến dịch (kèm linh vật) → ô tìm vé → phần còn lại */
+ .tet-hero{display:grid;grid-template-columns:92px minmax(0,1fr);column-gap:6px;padding:14px 12px 0}
+ .tet-hero-in,.tet-copy{display:contents}
+ .tet-copy .tet-h1{grid-column:1/-1;order:1;font-size:13.5px;line-height:1.35;text-align:center;padding:0 4px;text-shadow:0 1px 4px rgba(30,5,40,.85),0 0 10px rgba(30,5,40,.5);position:relative;z-index:2}
+ .tet-tagline{grid-column:1/-1;order:2;text-align:center;font-size:12px;margin:2px 0 6px;color:#fff;text-shadow:0 1px 3px rgba(30,5,40,.8);position:relative;z-index:2}
+ .tet-mascot{order:3;grid-row:auto;grid-column:1;align-self:center;position:relative;z-index:2}
+ .tet-campaign{order:4;grid-column:2;text-align:center;position:relative;z-index:2}
+ .tet-ribbon{font-size:28px;padding:0 18px 3px}
+ .tet-script{font-size:38px}
+ .tet-sub{font-size:14.5px;padding:7px 12px}
+ .tet-search-wrap{order:6;grid-column:1/-1;margin:-4px 0 0;padding:0}
+ .tet-checks{order:7;grid-column:1/-1;margin:16px auto 0;position:relative;z-index:2}
+ .tet-msg{order:8;grid-column:1/-1;text-align:center;font-size:16px;color:#4a1a08;position:relative;z-index:2}
+ .tet-art{order:5;grid-column:1/-1;margin:4px auto 0;height:128px;width:100%;max-width:300px;position:relative;z-index:2}
+ /* trang trí: bỏ pháo hoa sau chữ, mai/đào nhỏ và mờ hơn */
+ .tet-fw1,.tet-fw2,.tet-fw3,.tet-lantern{display:none}
+ .tet-mai{width:110px;left:-28px;top:-10px;opacity:.6}
+ .tet-dao{width:110px;right:-28px;top:-10px;opacity:.6}
+ .tet-hills{bottom:120px;height:200px}
+}
